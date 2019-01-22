@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainMove : MonoBehaviour
+public class TrainMove_Basic : MonoBehaviour
 {
 
     Rigidbody rigidBody;

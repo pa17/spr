@@ -444,7 +444,12 @@ PrefabInstance:
     - target: {fileID: 1972994326952684065, guid: b789de77baf0d264dbbdd5acbcfe2b5d,
         type: 3}
       propertyPath: m_Name
-      value: TrainLayer
+      value: TrainLayer_Basic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972994328723814626, guid: b789de77baf0d264dbbdd5acbcfe2b5d,
+        type: 3}
+      propertyPath: m_Name
+      value: Train_Basic
       objectReference: {fileID: 0}
     - target: {fileID: 1972994326952684064, guid: b789de77baf0d264dbbdd5acbcfe2b5d,
         type: 3}
