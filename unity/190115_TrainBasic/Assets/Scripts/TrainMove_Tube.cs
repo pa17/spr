@@ -7,6 +7,7 @@ public class TrainMove_Tube : MonoBehaviour
 
     Rigidbody rigidBody;
     AudioSource audioSource;
+    MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +39,25 @@ public class TrainMove_Tube : MonoBehaviour
             rigidBody.AddRelativeForce(Vector3.left);
         }
 
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.C))
         {
-            rigidBody.AddRelativeForce(Vector3.forward);
+            rigidBody.velocity = new Vector3(0, 0, -10);
         }
 
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.V))
         {
-            rigidBody.AddRelativeForce(Vector3.back);
+            rigidBody.velocity = new Vector3(0, 0, -20);
+        }
+
+        else if (Input.GetKey(KeyCode.B))
+        {
+            rigidBody.velocity = new Vector3(0, 0, -35);
+        }
+
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            rigidBody.velocity = new Vector3(0, 0, 0);
+            print(rigidBody.position.z - 50);
         }
     }
 }
