@@ -63,7 +63,7 @@ public class TrainLayer_Move : MonoBehaviour
         // Scenario 1
         else if (Input.GetKey(KeyCode.Alpha1))
         {
-            rigidBody.position = new Vector3(-2.2f, 4, 200);
+            rigidBody.position = new Vector3(-1.1f, 3, 200);
             rigidBody.velocity = new Vector3(0, 0, -10);
             print("Distance from main camera: " + (rigidBody.position.z - 50));
         }
@@ -72,7 +72,7 @@ public class TrainLayer_Move : MonoBehaviour
         // Scenario 2
         else if (Input.GetKey(KeyCode.Alpha2))
         {
-            rigidBody.position = new Vector3(-2.2f, 4, 200);
+            rigidBody.position = new Vector3(-1.1f, 3, 200);
             rigidBody.velocity = new Vector3(0, 0, -20);
             print("Distance from main camera: " + (rigidBody.position.z - 50));
         }
@@ -81,7 +81,7 @@ public class TrainLayer_Move : MonoBehaviour
         // Scenario 3
         else if (Input.GetKey(KeyCode.Alpha3))
         {
-            rigidBody.position = new Vector3(-2.2f, 4, 200);
+            rigidBody.position = new Vector3(-1.1f, 3, 200);
             rigidBody.velocity = new Vector3(0, 0, -35);
             print("Distance from main camera: " + (rigidBody.position.z - 50));
         }
