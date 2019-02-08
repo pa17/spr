@@ -1,0 +1,834 @@
+fileFormatVersion: 2
+guid: 65c5059ba4cfc6f448ea07e95b783141
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000
+  assetHash:
+    serializedVersion: 2
+    Hash: c271f6be9b482f497223fc9f85177fa9
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.6355209, y: 1.6327598, z: 43.180267}
+      lookAt: {x: 0.37174058, y: -0.3689156, z: 31.331036}
+      up: {x: -0.0037062392, y: 0.98603666, z: -0.16648737}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Component
+    100004: Component 1
+    100006: Component 2
+    100008: Component 3
+    100010: Component 4
+    100012: Component 5
+    100014: Component 6
+    100016: Component 7
+    100018: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0
+    100020: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0 1
+    100022: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0 2
+    100024: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0 3
+    100026: Group 2
+    100028: Group 4
+    100030: London underground Pit Track
+    100032: London underground Pit Track 1
+    100034: London underground Pit Track 2
+    100036: London underground Pit Track 3
+    100038: pad
+    100040: pad 1
+    100042: pad 10
+    100044: pad 100
+    100046: pad 101
+    100048: pad 102
+    100050: pad 103
+    100052: pad 104
+    100054: pad 105
+    100056: pad 106
+    100058: pad 107
+    100060: pad 108
+    100062: pad 109
+    100064: pad 11
+    100066: pad 110
+    100068: pad 111
+    100070: pad 112
+    100072: pad 113
+    100074: pad 114
+    100076: pad 115
+    100078: pad 116
+    100080: pad 117
+    100082: pad 118
+    100084: pad 119
+    100086: pad 12
+    100088: pad 120
+    100090: pad 121
+    100092: pad 122
+    100094: pad 123
+    100096: pad 124
+    100098: pad 125
+    100100: pad 126
+    100102: pad 127
+    100104: pad 128
+    100106: pad 129
+    100108: pad 13
+    100110: pad 130
+    100112: pad 131
+    100114: pad 132
+    100116: pad 133
+    100118: pad 134
+    100120: pad 135
+    100122: pad 136
+    100124: pad 137
+    100126: pad 138
+    100128: pad 139
+    100130: pad 14
+    100132: pad 140
+    100134: pad 141
+    100136: pad 142
+    100138: pad 143
+    100140: pad 144
+    100142: pad 145
+    100144: pad 146
+    100146: pad 147
+    100148: pad 15
+    100150: pad 16
+    100152: pad 17
+    100154: pad 18
+    100156: pad 19
+    100158: pad 2
+    100160: pad 20
+    100162: pad 21
+    100164: pad 22
+    100166: pad 23
+    100168: pad 24
+    100170: pad 25
+    100172: pad 26
+    100174: pad 27
+    100176: pad 28
+    100178: pad 29
+    100180: pad 3
+    100182: pad 30
+    100184: pad 31
+    100186: pad 32
+    100188: pad 33
+    100190: pad 34
+    100192: pad 35
+    100194: pad 36
+    100196: pad 37
+    100198: pad 38
+    100200: pad 39
+    100202: pad 4
+    100204: pad 40
+    100206: pad 41
+    100208: pad 42
+    100210: pad 43
+    100212: pad 44
+    100214: pad 45
+    100216: pad 46
+    100218: pad 47
+    100220: pad 48
+    100222: pad 49
+    100224: pad 5
+    100226: pad 50
+    100228: pad 51
+    100230: pad 52
+    100232: pad 53
+    100234: pad 54
+    100236: pad 55
+    100238: pad 56
+    100240: pad 57
+    100242: pad 58
+    100244: pad 59
+    100246: pad 6
+    100248: pad 60
+    100250: pad 61
+    100252: pad 62
+    100254: pad 63
+    100256: pad 64
+    100258: pad 65
+    100260: pad 66
+    100262: pad 67
+    100264: pad 68
+    100266: pad 69
+    100268: pad 7
+    100270: pad 70
+    100272: pad 71
+    100274: pad 72
+    100276: pad 73
+    100278: pad 74
+    100280: pad 75
+    100282: pad 76
+    100284: pad 77
+    100286: pad 78
+    100288: pad 79
+    100290: pad 8
+    100292: pad 80
+    100294: pad 81
+    100296: pad 82
+    100298: pad 83
+    100300: pad 84
+    100302: pad 85
+    100304: pad 86
+    100306: pad 87
+    100308: pad 88
+    100310: pad 89
+    100312: pad 9
+    100314: pad 90
+    100316: pad 91
+    100318: pad 92
+    100320: pad 93
+    100322: pad 94
+    100324: pad 95
+    100326: pad 96
+    100328: pad 97
+    100330: pad 98
+    100332: pad 99
+    100334: rai
+    100336: rai 1
+    100338: rai 2
+    100340: rai 3
+    100342: rai 4
+    100344: rai 5
+    100346: rai 6
+    100348: rai 7
+    100350: rail pads
+    100352: rail pads 1
+    100354: rail pads 2
+    100356: rail pads 3
+    100358: S7 Stock Train (District)
+    100360: S7 Stock Train (District) 1
+    400000: //RootNode
+    400002: Component
+    400004: Component 1
+    400006: Component 2
+    400008: Component 3
+    400010: Component 4
+    400012: Component 5
+    400014: Component 6
+    400016: Component 7
+    400018: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0
+    400020: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0 1
+    400022: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0 2
+    400024: download?mid=df55bc7295ebf8456a06665493f50dc&ctyp=sm&cv=p8.0 3
+    400026: Group 2
+    400028: Group 4
+    400030: London underground Pit Track
+    400032: London underground Pit Track 1
+    400034: London underground Pit Track 2
+    400036: London underground Pit Track 3
+    400038: pad
+    400040: pad 1
+    400042: pad 10
+    400044: pad 100
+    400046: pad 101
+    400048: pad 102
+    400050: pad 103
+    400052: pad 104
+    400054: pad 105
+    400056: pad 106
+    400058: pad 107
+    400060: pad 108
+    400062: pad 109
+    400064: pad 11
+    400066: pad 110
+    400068: pad 111
+    400070: pad 112
+    400072: pad 113
+    400074: pad 114
+    400076: pad 115
+    400078: pad 116
+    400080: pad 117
+    400082: pad 118
+    400084: pad 119
+    400086: pad 12
+    400088: pad 120
+    400090: pad 121
+    400092: pad 122
+    400094: pad 123
+    400096: pad 124
+    400098: pad 125
+    400100: pad 126
+    400102: pad 127
+    400104: pad 128
+    400106: pad 129
+    400108: pad 13
+    400110: pad 130
+    400112: pad 131
+    400114: pad 132
+    400116: pad 133
+    400118: pad 134
+    400120: pad 135
+    400122: pad 136
+    400124: pad 137
+    400126: pad 138
+    400128: pad 139
+    400130: pad 14
+    400132: pad 140
+    400134: pad 141
+    400136: pad 142
+    400138: pad 143
+    400140: pad 144
+    400142: pad 145
+    400144: pad 146
+    400146: pad 147
+    400148: pad 15
+    400150: pad 16
+    400152: pad 17
+    400154: pad 18
+    400156: pad 19
+    400158: pad 2
+    400160: pad 20
+    400162: pad 21
+    400164: pad 22
+    400166: pad 23
+    400168: pad 24
+    400170: pad 25
+    400172: pad 26
+    400174: pad 27
+    400176: pad 28
+    400178: pad 29
+    400180: pad 3
+    400182: pad 30
+    400184: pad 31
+    400186: pad 32
+    400188: pad 33
+    400190: pad 34
+    400192: pad 35
+    400194: pad 36
+    400196: pad 37
+    400198: pad 38
+    400200: pad 39
+    400202: pad 4
+    400204: pad 40
+    400206: pad 41
+    400208: pad 42
+    400210: pad 43
+    400212: pad 44
+    400214: pad 45
+    400216: pad 46
+    400218: pad 47
+    400220: pad 48
+    400222: pad 49
+    400224: pad 5
+    400226: pad 50
+    400228: pad 51
+    400230: pad 52
+    400232: pad 53
+    400234: pad 54
+    400236: pad 55
+    400238: pad 56
+    400240: pad 57
+    400242: pad 58
+    400244: pad 59
+    400246: pad 6
+    400248: pad 60
+    400250: pad 61
+    400252: pad 62
+    400254: pad 63
+    400256: pad 64
+    400258: pad 65
+    400260: pad 66
+    400262: pad 67
+    400264: pad 68
+    400266: pad 69
+    400268: pad 7
+    400270: pad 70
+    400272: pad 71
+    400274: pad 72
+    400276: pad 73
+    400278: pad 74
+    400280: pad 75
+    400282: pad 76
+    400284: pad 77
+    400286: pad 78
+    400288: pad 79
+    400290: pad 8
+    400292: pad 80
+    400294: pad 81
+    400296: pad 82
+    400298: pad 83
+    400300: pad 84
+    400302: pad 85
+    400304: pad 86
+    400306: pad 87
+    400308: pad 88
+    400310: pad 89
+    400312: pad 9
+    400314: pad 90
+    400316: pad 91
+    400318: pad 92
+    400320: pad 93
+    400322: pad 94
+    400324: pad 95
+    400326: pad 96
+    400328: pad 97
+    400330: pad 98
+    400332: pad 99
+    400334: rai
+    400336: rai 1
+    400338: rai 2
+    400340: rai 3
+    400342: rai 4
+    400344: rai 5
+    400346: rai 6
+    400348: rai 7
+    400350: rail pads
+    400352: rail pads 1
+    400354: rail pads 2
+    400356: rail pads 3
+    400358: S7 Stock Train (District)
+    400360: S7 Stock Train (District) 1
+    2100000: _defaultMat
+    2100002: '[Brick Rough Dark]1'
+    2100004: '[Color M05]'
+    2100006: '[Color E05]'
+    2100008: '[Brick Rough Dark]'
+    2100010: '[Color_A25]1'
+    2100012: '[Blacktop New]'
+    2100014: '[Color_002]'
+    2100016: '[Asphalt_New]2'
+    2100018: '[Color_003]2'
+    2100020: Wood_Grain_Light
+    2300000: //RootNode
+    2300002: Component
+    2300004: Component 1
+    2300006: Component 2
+    2300008: Component 3
+    2300010: Component 4
+    2300012: Component 5
+    2300014: Component 6
+    2300016: Component 7
+    2300018: Group 2
+    2300020: Group 4
+    2300022: London underground Pit Track
+    2300024: London underground Pit Track 1
+    2300026: London underground Pit Track 2
+    2300028: London underground Pit Track 3
+    2300030: pad
+    2300032: pad 1
+    2300034: pad 10
+    2300036: pad 100
+    2300038: pad 101
+    2300040: pad 102
+    2300042: pad 103
+    2300044: pad 104
+    2300046: pad 105
+    2300048: pad 106
+    2300050: pad 107
+    2300052: pad 108
+    2300054: pad 109
+    2300056: pad 11
+    2300058: pad 110
+    2300060: pad 111
+    2300062: pad 112
+    2300064: pad 113
+    2300066: pad 114
+    2300068: pad 115
+    2300070: pad 116
+    2300072: pad 117
+    2300074: pad 118
+    2300076: pad 119
+    2300078: pad 12
+    2300080: pad 120
+    2300082: pad 121
+    2300084: pad 122
+    2300086: pad 123
+    2300088: pad 124
+    2300090: pad 125
+    2300092: pad 126
+    2300094: pad 127
+    2300096: pad 128
+    2300098: pad 129
+    2300100: pad 13
+    2300102: pad 130
+    2300104: pad 131
+    2300106: pad 132
+    2300108: pad 133
+    2300110: pad 134
+    2300112: pad 135
+    2300114: pad 136
+    2300116: pad 137
+    2300118: pad 138
+    2300120: pad 139
+    2300122: pad 14
+    2300124: pad 140
+    2300126: pad 141
+    2300128: pad 142
+    2300130: pad 143
+    2300132: pad 144
+    2300134: pad 145
+    2300136: pad 146
+    2300138: pad 147
+    2300140: pad 15
+    2300142: pad 16
+    2300144: pad 17
+    2300146: pad 18
+    2300148: pad 19
+    2300150: pad 2
+    2300152: pad 20
+    2300154: pad 21
+    2300156: pad 22
+    2300158: pad 23
+    2300160: pad 24
+    2300162: pad 25
+    2300164: pad 26
+    2300166: pad 27
+    2300168: pad 28
+    2300170: pad 29
+    2300172: pad 3
+    2300174: pad 30
+    2300176: pad 31
+    2300178: pad 32
+    2300180: pad 33
+    2300182: pad 34
+    2300184: pad 35
+    2300186: pad 36
+    2300188: pad 37
+    2300190: pad 38
+    2300192: pad 39
+    2300194: pad 4
+    2300196: pad 40
+    2300198: pad 41
+    2300200: pad 42
+    2300202: pad 43
+    2300204: pad 44
+    2300206: pad 45
+    2300208: pad 46
+    2300210: pad 47
+    2300212: pad 48
+    2300214: pad 49
+    2300216: pad 5
+    2300218: pad 50
+    2300220: pad 51
+    2300222: pad 52
+    2300224: pad 53
+    2300226: pad 54
+    2300228: pad 55
+    2300230: pad 56
+    2300232: pad 57
+    2300234: pad 58
+    2300236: pad 59
+    2300238: pad 6
+    2300240: pad 60
+    2300242: pad 61
+    2300244: pad 62
+    2300246: pad 63
+    2300248: pad 64
+    2300250: pad 65
+    2300252: pad 66
+    2300254: pad 67
+    2300256: pad 68
+    2300258: pad 69
+    2300260: pad 7
+    2300262: pad 70
+    2300264: pad 71
+    2300266: pad 72
+    2300268: pad 73
+    2300270: pad 74
+    2300272: pad 75
+    2300274: pad 76
+    2300276: pad 77
+    2300278: pad 78
+    2300280: pad 79
+    2300282: pad 8
+    2300284: pad 80
+    2300286: pad 81
+    2300288: pad 82
+    2300290: pad 83
+    2300292: pad 84
+    2300294: pad 85
+    2300296: pad 86
+    2300298: pad 87
+    2300300: pad 88
+    2300302: pad 89
+    2300304: pad 9
+    2300306: pad 90
+    2300308: pad 91
+    2300310: pad 92
+    2300312: pad 93
+    2300314: pad 94
+    2300316: pad 95
+    2300318: pad 96
+    2300320: pad 97
+    2300322: pad 98
+    2300324: pad 99
+    2300326: rai
+    2300328: rai 1
+    2300330: rai 2
+    2300332: rai 3
+    2300334: rai 4
+    2300336: rai 5
+    2300338: rai 6
+    2300340: rai 7
+    3300000: //RootNode
+    3300002: Component
+    3300004: Component 1
+    3300006: Component 2
+    3300008: Component 3
+    3300010: Component 4
+    3300012: Component 5
+    3300014: Component 6
+    3300016: Component 7
+    3300018: Group 2
+    3300020: Group 4
+    3300022: London underground Pit Track
+    3300024: London underground Pit Track 1
+    3300026: London underground Pit Track 2
+    3300028: London underground Pit Track 3
+    3300030: pad
+    3300032: pad 1
+    3300034: pad 10
+    3300036: pad 100
+    3300038: pad 101
+    3300040: pad 102
+    3300042: pad 103
+    3300044: pad 104
+    3300046: pad 105
+    3300048: pad 106
+    3300050: pad 107
+    3300052: pad 108
+    3300054: pad 109
+    3300056: pad 11
+    3300058: pad 110
+    3300060: pad 111
+    3300062: pad 112
+    3300064: pad 113
+    3300066: pad 114
+    3300068: pad 115
+    3300070: pad 116
+    3300072: pad 117
+    3300074: pad 118
+    3300076: pad 119
+    3300078: pad 12
+    3300080: pad 120
+    3300082: pad 121
+    3300084: pad 122
+    3300086: pad 123
+    3300088: pad 124
+    3300090: pad 125
+    3300092: pad 126
+    3300094: pad 127
+    3300096: pad 128
+    3300098: pad 129
+    3300100: pad 13
+    3300102: pad 130
+    3300104: pad 131
+    3300106: pad 132
+    3300108: pad 133
+    3300110: pad 134
+    3300112: pad 135
+    3300114: pad 136
+    3300116: pad 137
+    3300118: pad 138
+    3300120: pad 139
+    3300122: pad 14
+    3300124: pad 140
+    3300126: pad 141
+    3300128: pad 142
+    3300130: pad 143
+    3300132: pad 144
+    3300134: pad 145
+    3300136: pad 146
+    3300138: pad 147
+    3300140: pad 15
+    3300142: pad 16
+    3300144: pad 17
+    3300146: pad 18
+    3300148: pad 19
+    3300150: pad 2
+    3300152: pad 20
+    3300154: pad 21
+    3300156: pad 22
+    3300158: pad 23
+    3300160: pad 24
+    3300162: pad 25
+    3300164: pad 26
+    3300166: pad 27
+    3300168: pad 28
+    3300170: pad 29
+    3300172: pad 3
+    3300174: pad 30
+    3300176: pad 31
+    3300178: pad 32
+    3300180: pad 33
+    3300182: pad 34
+    3300184: pad 35
+    3300186: pad 36
+    3300188: pad 37
+    3300190: pad 38
+    3300192: pad 39
+    3300194: pad 4
+    3300196: pad 40
+    3300198: pad 41
+    3300200: pad 42
+    3300202: pad 43
+    3300204: pad 44
+    3300206: pad 45
+    3300208: pad 46
+    3300210: pad 47
+    3300212: pad 48
+    3300214: pad 49
+    3300216: pad 5
+    3300218: pad 50
+    3300220: pad 51
+    3300222: pad 52
+    3300224: pad 53
+    3300226: pad 54
+    3300228: pad 55
+    3300230: pad 56
+    3300232: pad 57
+    3300234: pad 58
+    3300236: pad 59
+    3300238: pad 6
+    3300240: pad 60
+    3300242: pad 61
+    3300244: pad 62
+    3300246: pad 63
+    3300248: pad 64
+    3300250: pad 65
+    3300252: pad 66
+    3300254: pad 67
+    3300256: pad 68
+    3300258: pad 69
+    3300260: pad 7
+    3300262: pad 70
+    3300264: pad 71
+    3300266: pad 72
+    3300268: pad 73
+    3300270: pad 74
+    3300272: pad 75
+    3300274: pad 76
+    3300276: pad 77
+    3300278: pad 78
+    3300280: pad 79
+    3300282: pad 8
+    3300284: pad 80
+    3300286: pad 81
+    3300288: pad 82
+    3300290: pad 83
+    3300292: pad 84
+    3300294: pad 85
+    3300296: pad 86
+    3300298: pad 87
+    3300300: pad 88
+    3300302: pad 89
+    3300304: pad 9
+    3300306: pad 90
+    3300308: pad 91
+    3300310: pad 92
+    3300312: pad 93
+    3300314: pad 94
+    3300316: pad 95
+    3300318: pad 96
+    3300320: pad 97
+    3300322: pad 98
+    3300324: pad 99
+    3300326: rai
+    3300328: rai 1
+    3300330: rai 2
+    3300332: rai 3
+    3300334: rai 4
+    3300336: rai 5
+    3300338: rai 6
+    3300340: rai 7
+    4300000: Mesh 190208_Station_V7
+    4300002: Mesh Group 2
+    4300004: Mesh Group 4
+    4300006: Mesh London underground Pit Track
+    4300008: Mesh rai
+    4300010: Mesh pad
+    4300012: Mesh rai
+    4300014: Mesh Component
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
