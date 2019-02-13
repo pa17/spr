@@ -11016,6 +11016,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735205914566630983, guid: 63356104ca955e341b68449245e27512,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd4c07feae2ae2142945cd02deec239d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63356104ca955e341b68449245e27512, type: 3}
 --- !u!20 &680591494 stripped
@@ -28709,7 +28715,7 @@ PrefabInstance:
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
@@ -28719,7 +28725,7 @@ PrefabInstance:
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
@@ -28729,7 +28735,7 @@ PrefabInstance:
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.12186928
       objectReference: {fileID: 0}
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
@@ -28739,12 +28745,12 @@ PrefabInstance:
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9925462
       objectReference: {fileID: 0}
     - target: {fileID: 6388778781007277393, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6388778781556471551, guid: a2b7018925d21a2488a42b0aead927c8,
         type: 3}
