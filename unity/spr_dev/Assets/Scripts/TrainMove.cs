@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainLayer_Move : MonoBehaviour
+public class TrainMove : MonoBehaviour
 {
     Rigidbody rigidBody;
     AudioSource audioSource;

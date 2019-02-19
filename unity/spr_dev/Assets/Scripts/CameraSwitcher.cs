@@ -6,7 +6,16 @@ public class CameraSwitcher : MonoBehaviour
 {
 
     public Camera Camera_1, Camera_2, Camera_3;
-    public char activeCam = '0';
+    public char activeCam = '1';
+
+    void Start()
+    {
+        {
+            Camera_1.gameObject.SetActive(false);
+            Camera_2.gameObject.SetActive(false);
+            Camera_3.gameObject.SetActive(true);
+        }
+    }
 
     void Update()
     {
