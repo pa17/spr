@@ -8,7 +8,7 @@ public class Countdown : MonoBehaviour
 
     public float timeLeft = 3.0f;
     public Text startText; // used for showing countdown from 3, 2, 1 
-
+    public UnityEngine.Events.UnityEvent startTrains;
 
     void Update()
     {
@@ -16,7 +16,8 @@ public class Countdown : MonoBehaviour
         startText.text = (timeLeft).ToString("0");
         if (timeLeft < 0)
         {
-            //Do something useful or Load a new game scene depending on your use-case
+            startTrains.Invoke();
+            Destroy(this.gameObject);
         }
     }
 }

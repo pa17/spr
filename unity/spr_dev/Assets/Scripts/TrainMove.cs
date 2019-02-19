@@ -21,6 +21,11 @@ public class TrainMove : MonoBehaviour
         ProcessInput();
     }
 
+    public void Accelerate()
+    {
+        rigidBody.velocity = new Vector3(0, 0, -20);
+    }
+
     private void ProcessInput()
     {
         if (Input.GetKey(KeyCode.W))

@@ -5711,6 +5711,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 10
   startText: {fileID: 269489846}
+  startTrains:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1342609972}
+        m_MethodName: Accelerate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &332343265
 GameObject:
   m_ObjectHideFlags: 0
@@ -11659,6 +11675,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+--- !u!114 &1342609972 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1328220817, guid: 51a80a23013b4254e9b0b67c47fd9697,
+    type: 3}
+  m_PrefabInstance: {fileID: 1338644235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637f2f9e74c2a8842967a887df9ec165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418884761
 GameObject:
   m_ObjectHideFlags: 0
