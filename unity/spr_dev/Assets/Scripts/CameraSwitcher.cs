@@ -6,7 +6,7 @@ public class CameraSwitcher : MonoBehaviour
 {
 
     public Camera Camera_1, Camera_2, Camera_3;
-    public char activeCam = '1';
+    public Camera activeCam;
 
     void Start()
     {
@@ -14,6 +14,7 @@ public class CameraSwitcher : MonoBehaviour
             Camera_1.gameObject.SetActive(false);
             Camera_2.gameObject.SetActive(false);
             Camera_3.gameObject.SetActive(true);
+            activeCam = Camera_3;
         }
     }
 
@@ -24,7 +25,7 @@ public class CameraSwitcher : MonoBehaviour
             Camera_1.gameObject.SetActive(true);
             Camera_2.gameObject.SetActive(false);
             Camera_3.gameObject.SetActive(false);
-            activeCam = '1';
+            activeCam = Camera_1;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha8))
@@ -32,7 +33,7 @@ public class CameraSwitcher : MonoBehaviour
             Camera_1.gameObject.SetActive(false);
             Camera_2.gameObject.SetActive(true);
             Camera_3.gameObject.SetActive(false);
-            activeCam = '2';
+            activeCam = Camera_2;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha9))
@@ -40,7 +41,7 @@ public class CameraSwitcher : MonoBehaviour
             Camera_1.gameObject.SetActive(false);
             Camera_2.gameObject.SetActive(false);
             Camera_3.gameObject.SetActive(true);
-            activeCam = '3';
+            activeCam = Camera_3;
         }
     }
 }

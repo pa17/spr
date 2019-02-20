@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AlteredTrain
+  - Train
   layers:
   - Default
   - TransparentFX

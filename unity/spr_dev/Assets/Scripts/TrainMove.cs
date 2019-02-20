@@ -8,34 +8,19 @@ public class TrainMove : MonoBehaviour
     AudioSource audioSource;
     MeshRenderer meshRenderer;
 
-    // Start is called before the first frame update
+    private Vector3 initialPosition;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
-        //audioSource = GetComponentInChildren<AudioSource>();
+        initialPosition = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        ProcessInput();
-    }
-
-    public void Accelerate()
-    {
-        rigidBody.velocity = new Vector3(0, 0, -20);
-    }
-
-    private void ProcessInput()
     {
         if (Input.GetKey(KeyCode.W))
         {
             rigidBody.AddRelativeForce(Vector3.back);
-
-            //if (!audioSource.isPlaying)
-            //{
-            //    audioSource.Play();
-            //}
         }
 
         else if (Input.GetKey(KeyCode.S))
@@ -57,38 +42,21 @@ public class TrainMove : MonoBehaviour
         {
             rigidBody.velocity = new Vector3(0, 0, -35);
         }
+    }
 
-        else if (Input.GetKey(KeyCode.Space))
-        {
-            rigidBody.velocity = new Vector3(0, 0, 0);
-            print("Distance from main camera: " + (rigidBody.position.z - 50));
-        }
+    public void Accelerate()
+    {
+        rigidBody.velocity = new Vector3(0, 0, -20);
+    }
 
+    public void ResetTrainPosition()
+    {
+        transform.position = initialPosition;
+        rigidBody.velocity = new Vector3(0, 0, 0);
+    }
 
-        // Scenario 1
-        else if (Input.GetKey(KeyCode.Alpha1))
-        {
-            rigidBody.position = new Vector3(-1.1f, 3, 200);
-            rigidBody.velocity = new Vector3(0, 0, -10);
-            print("Distance from main camera: " + (rigidBody.position.z - 50));
-        }
-
-
-        // Scenario 2
-        else if (Input.GetKey(KeyCode.Alpha2))
-        {
-            rigidBody.position = new Vector3(-1.1f, 3, 200);
-            rigidBody.velocity = new Vector3(0, 0, -20);
-            print("Distance from main camera: " + (rigidBody.position.z - 50));
-        }
-
-
-        // Scenario 3
-        else if (Input.GetKey(KeyCode.Alpha3))
-        {
-            rigidBody.position = new Vector3(-1.1f, 3, 200);
-            rigidBody.velocity = new Vector3(0, 0, -35);
-            print("Distance from main camera: " + (rigidBody.position.z - 50));
-        }
+    public void StopTrain()
+    {
+        rigidBody.velocity = new Vector3(0, 0, 0);
     }
 }

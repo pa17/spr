@@ -9,10 +9,4 @@ public class DisablePositionalTracking : MonoBehaviour
     {
         UnityEngine.XR.InputTracking.disablePositionalTracking = true;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
