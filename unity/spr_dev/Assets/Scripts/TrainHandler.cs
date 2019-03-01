@@ -10,7 +10,7 @@ public class TrainHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        trainsMove = GetComponentsInChildren<TrainMove>();
+        trainsMove = GetComponentsInChildren<TrainMove>(true);
     }
 
     public void AccelerateTrains()

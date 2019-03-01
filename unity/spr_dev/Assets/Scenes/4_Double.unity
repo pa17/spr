@@ -193,6 +193,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &482811072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8695493865080992490, guid: 9253885d20dd7034aab3310856a1d40d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8695493863662404723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &482811073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482811072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f31eeb98528ffc468cae9acf7004f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timePassed: 0
+  timer: 0
 --- !u!1 &974880725
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,18 +285,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3182445949655848466}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1393816115 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6696904180602322051, guid: b549a400e4a7143459e3c8795f4d52e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3182445949655848466}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 637f2f9e74c2a8842967a887df9ec165, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1562066713 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3182445948261705995, guid: b549a400e4a7143459e3c8795f4d52e3,
@@ -452,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
       propertyPath: stopTrains.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
@@ -539,6 +547,31 @@ PrefabInstance:
       propertyPath: switchSimulation.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: stopTrains.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: stopTrains.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: stopTrains.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 482811073}
+    - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: stopTrains.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StopTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695493865080992488, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: stopTrains.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8695493863457376639, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
       propertyPath: target
@@ -552,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 8695493863931892427, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
       propertyPath: startTrains.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8695493863931892427, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
@@ -563,7 +596,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startTrains.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1393816115}
+      objectReference: {fileID: 482811073}
     - target: {fileID: 8695493863931892427, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
       propertyPath: startTrains.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -592,6 +625,16 @@ PrefabInstance:
     - target: {fileID: 8695493863931892427, guid: 9253885d20dd7034aab3310856a1d40d,
         type: 3}
       propertyPath: startTrains.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695493863931892427, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: startTrains.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695493863931892427, guid: 9253885d20dd7034aab3310856a1d40d,
+        type: 3}
+      propertyPath: startTrains.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
