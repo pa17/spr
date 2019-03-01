@@ -6,6 +6,7 @@ public class TrainHandler : MonoBehaviour
 {
 
     public TrainMove[] trainsMove;
+    public int hideTrainDistance = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,17 @@ public class TrainHandler : MonoBehaviour
             if (train.gameObject.activeSelf == true)
             {
                 train.ResetTrainPosition();
+            }
+        }
+    }
+
+    public void HideTrains()
+    {
+        foreach (TrainMove train in trainsMove)
+        {
+            if (train.gameObject.activeSelf == true)
+            {
+                train.HideTrain();
             }
         }
     }

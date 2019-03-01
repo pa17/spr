@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TrainFollower : MonoBehaviour
+public class ObjectFollower : MonoBehaviour
 {
     public Transform target;
 

@@ -22,5 +22,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timePassed += Time.deltaTime;
+
+
     }
 }

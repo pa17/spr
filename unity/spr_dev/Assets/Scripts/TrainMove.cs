@@ -7,6 +7,7 @@ public class TrainMove : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
     MeshRenderer meshRenderer;
+    TrainHandler trainHandler;
 
     private Vector3 initialPosition;
 
@@ -14,6 +15,7 @@ public class TrainMove : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
+        trainHandler = GameObject.Find("TrainContainer").GetComponent<TrainHandler>();
     }
 
     void Update()
@@ -42,11 +44,22 @@ public class TrainMove : MonoBehaviour
         {
             rigidBody.velocity = new Vector3(0, 0, -35);
         }
+
+        if (transform.position.z < trainHandler.hideTrainDistance)
+        {
+            HideTrain();
+        }
+
     }
 
     public void Accelerate()
     {
         rigidBody.velocity = new Vector3(0, 0, -20);
+    }
+
+    public void HideTrain()
+    {
+        gameObject.SetActive(false);
     }
 
     public void ResetTrainPosition()
