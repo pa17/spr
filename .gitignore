@@ -36,3 +36,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 resources/.DS_Store
+*.FBX
