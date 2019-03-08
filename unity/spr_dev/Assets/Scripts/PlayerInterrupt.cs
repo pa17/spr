@@ -8,6 +8,8 @@ public class PlayerInterrupt : MonoBehaviour
     public UnityEngine.Events.UnityEvent stopTrains;
     public UnityEngine.Events.UnityEvent switchSimulation;
     public UnityEngine.Events.UnityEvent resetTrainPositions;
+    public UnityEngine.Events.UnityEvent sendToGoogle;
+
 
     Timer timer;
 
@@ -24,12 +26,19 @@ public class PlayerInterrupt : MonoBehaviour
         {
             timer.StopTimer();
             stopTrains.Invoke();
+
+
         }
 
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             resetTrainPositions.Invoke();
             switchSimulation.Invoke();
+        }
+
+        else if(Input.GetKeyDown(KeyCode.F12))
+        {
+            sendToGoogle.Invoke();
         }
     }
 }
