@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5816406230830363997, guid: b549a400e4a7143459e3c8795f4d52e3,
         type: 3}
       propertyPath: m_Name
-      value: M_TrainContainer
+      value: S4_TrainContainer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6809148171395178435, guid: b549a400e4a7143459e3c8795f4d52e3,
         type: 3}
@@ -66,6 +66,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182445949670591382, guid: b549a400e4a7143459e3c8795f4d52e3,
+        type: 3}
+      propertyPath: m_Name
+      value: TrainControl
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310397936720774006, guid: b549a400e4a7143459e3c8795f4d52e3,
+        type: 3}
+      propertyPath: m_Name
+      value: TrainImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182445948621250497, guid: b549a400e4a7143459e3c8795f4d52e3,
+        type: 3}
+      propertyPath: m_Name
+      value: TrainSquare
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314784023118888455, guid: b549a400e4a7143459e3c8795f4d52e3,
+        type: 3}
+      propertyPath: m_Name
+      value: TrainParralax
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283570226708429032, guid: b549a400e4a7143459e3c8795f4d52e3,
+        type: 3}
+      propertyPath: m_Name
+      value: TrainCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696904180602322077, guid: b549a400e4a7143459e3c8795f4d52e3,
+        type: 3}
+      propertyPath: m_Name
+      value: TrainMirror
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b549a400e4a7143459e3c8795f4d52e3, type: 3}

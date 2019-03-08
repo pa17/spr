@@ -5,18 +5,18 @@ using UnityEngine;
 public class TrainHandler : MonoBehaviour
 {
 
-    public TrainMove[] trainsMove;
+    public S6_TrainMove[] trainsMove;
     public int hideTrainDistance = 50;
 
     // Start is called before the first frame update
     void Start()
     {
-        trainsMove = GetComponentsInChildren<TrainMove>(true);
+        trainsMove = GetComponentsInChildren<S6_TrainMove>(true);
     }
 
     public void AccelerateTrains()
     {
-        foreach (TrainMove train in trainsMove)
+        foreach (S6_TrainMove train in trainsMove)
         {
             if (train.gameObject.activeSelf == true)
             {
@@ -27,7 +27,7 @@ public class TrainHandler : MonoBehaviour
     
     public void StopTrains()
     {
-        foreach (TrainMove train in trainsMove)
+        foreach (S6_TrainMove train in trainsMove)
         {
             if (train.gameObject.activeSelf == true)
             {
@@ -38,7 +38,7 @@ public class TrainHandler : MonoBehaviour
 
     public void ResetTrainPositions()
     {
-        foreach (TrainMove train in trainsMove)
+        foreach (S6_TrainMove train in trainsMove)
         {
             if (train.gameObject.activeSelf == true)
             {
@@ -49,7 +49,7 @@ public class TrainHandler : MonoBehaviour
 
     public void HideTrains()
     {
-        foreach (TrainMove train in trainsMove)
+        foreach (S6_TrainMove train in trainsMove)
         {
             if (train.gameObject.activeSelf == true)
             {
