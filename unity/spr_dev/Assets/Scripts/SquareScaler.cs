@@ -6,17 +6,17 @@ using UnityEngine;
 public class SquareScaler : MonoBehaviour
 {
     public Transform train;
-    float start_distance = 200;
-    public float SpeedSensitivity = 1;
+    public float relDistance = 230;
+    public float speedSensitivity = 1;
 
     // Update is called once per frame
     void Update()
     {
-        float z_pos = train.transform.position.z; // Starts at 200
+        float zPosRel = train.transform.position.z - relDistance;
 
-        float gradient = 1 / ((1 / SpeedSensitivity) * start_distance);
-        float intercept = 1 - start_distance * gradient;
-        float new_scale = gradient * z_pos + intercept;
+        float gradient = 1 / ((1 / speedSensitivity) * relDistance);
+        float intercept = 1 - relDistance * gradient;
+        float new_scale = gradient * zPosRel + intercept;
 
 
         // = (z_pos / start_distance) / SpeedSensitivity;

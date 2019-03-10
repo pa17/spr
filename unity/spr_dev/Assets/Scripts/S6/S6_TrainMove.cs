@@ -15,7 +15,7 @@ public class S6_TrainMove : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
-        trainHandler = GameObject.Find("S6_TrainContainer Variant").GetComponent<TrainHandler>();
+        trainHandler = GameObject.Find("S6_TrainContainer").GetComponent<TrainHandler>();
     }
 
     void Update()
@@ -45,10 +45,10 @@ public class S6_TrainMove : MonoBehaviour
             rigidBody.velocity = new Vector3(0, 0, -35);
         }
 
-        if (transform.position.z < trainHandler.hideTrainDistance)
-        {
-            HideTrain();
-        }
+        //if (transform.position.z < trainHandler.hideTrainDistance)
+        //{
+        //    HideTrain();
+        //}
 
     }
 
