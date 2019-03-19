@@ -2,21 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class SquareScaler : MonoBehaviour
+public class ContrastScaler : MonoBehaviour
 {
+
     public Transform train;
 
     public float speedSensitivity = 1;
 
     private float startDistance;
 
-    // Update is called once per frame
-    private void Start()
+    SpriteRenderer spriteRenderer;
+    SpriteRenderer wallsRenderer;
+
+    // Start is called before the first frame update
+    void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         startDistance = train.transform.position.z;
+
+        wallsRenderer = GameObject.Find("S6_WallFront").GetComponent<SpriteRenderer>();
     }
 
+    // Update is called once per frame
     void Update()
     {
         float zPosRel = train.transform.position.z;
@@ -27,7 +35,9 @@ public class SquareScaler : MonoBehaviour
 
 
         // = (z_pos / start_distance) / SpeedSensitivity;
+        spriteRenderer.color = new Color(new_scale, new_scale, new_scale, 1);
 
-        transform.localScale = new Vector3(new_scale, new_scale, 1);
+        wallsRenderer.color = new Color(1-new_scale, 1-new_scale, 1-new_scale, 1);
+
     }
 }

@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637906746717874762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -0.33, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 0.066, y: -0.434, z: -0.09}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 881156402282668084}
   m_RootOrder: 1
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e7b41f17f7085d42830d1614ac2ce72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd4c07feae2ae2142945cd02deec239d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +117,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a74a758d0a16a084798a3bd0a7bf115c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ca6b79430e4c2843aee6a673ca5ee56, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
@@ -136,7 +136,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1328220815, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
       propertyPath: m_Name
-      value: TrainContainerImage Variant
+      value: TrainImage Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1328220816, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,7 +182,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1328220817, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
 --- !u!4 &881156402282668084 stripped
 Transform:
