@@ -10,6 +10,12 @@ public class S6_ScenarioHandler : MonoBehaviour
     GameObject architecturalContainer;
     S6_ArchitecturalHandler architeturalHandler;
 
+    GameObject player;
+    Rigidbody playerRb;
+
+    public Vector3 fixedPositionIllusion;
+    public Vector3 fixedPositionObstruction;
+
     public S6_Timer timer;
 
     public int scenarioIndex;
@@ -23,11 +29,19 @@ public class S6_ScenarioHandler : MonoBehaviour
         architecturalContainer = GameObject.Find("S6_ArchitecturalContainer");
         architeturalHandler = GetComponentInChildren<S6_ArchitecturalHandler>();
 
+        player = GameObject.Find("S6_Player");
+        playerRb = player.GetComponent<Rigidbody>();
+
         scenarioIndex = 0;
 
         timer = GetComponent<S6_Timer>();
 
+        // ON START
+
         architecturalContainer.SetActive(false);
+        player.gameObject.transform.position = fixedPositionIllusion;
+        playerRb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+
 
     }
 
@@ -39,11 +53,23 @@ public class S6_ScenarioHandler : MonoBehaviour
             trainHandler.SwitchTrains();
             trainHandler.ResetTrainPositions();
         }
+        else if (scenarioIndex == 4)
+        {
+            playerRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
+            player.gameObject.transform.position = fixedPositionObstruction;
+
+            architecturalContainer.SetActive(true);
+            trainHandler.StopTrains();
+            trainHandler.ResetTrainPositions();
+        }
+
         else
         {
             architecturalContainer.SetActive(true);
             trainHandler.StopTrains();
             trainHandler.ResetTrainPositions();
+
+            // Move Player
 
             //architeturalHandler.SwitchIntervention();
         }

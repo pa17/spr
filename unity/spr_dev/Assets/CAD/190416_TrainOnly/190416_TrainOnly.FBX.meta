@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: 9772750904f70d3419888235c97abcc9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Modern_Underground _arc
+    100004: Modern_Underground _body
+    100006: Modern_Underground _chrome
+    100008: Modern_Underground _detail
+    100010: Modern_Underground _fabric
+    100012: Modern_Underground _floor
+    100014: Modern_Underground _metal_black
+    100016: Modern_Underground _sit
+    100018: Modern_Underground _Train_cab
+    100020: Modern_Underground _Train_light
+    100022: Modern_Underground _windows
+    400000: //RootNode
+    400002: Modern_Underground _arc
+    400004: Modern_Underground _body
+    400006: Modern_Underground _chrome
+    400008: Modern_Underground _detail
+    400010: Modern_Underground _fabric
+    400012: Modern_Underground _floor
+    400014: Modern_Underground _metal_black
+    400016: Modern_Underground _sit
+    400018: Modern_Underground _Train_cab
+    400020: Modern_Underground _Train_light
+    400022: Modern_Underground _windows
+    2100000: Modern_Underground _windows
+    2100002: Underground_Tube_Escalator_light
+    2100004: Modern_Underground _Train_cab
+    2100006: Modern_Underground _sit
+    2100008: Modern_Underground _metal_black
+    2100010: Modern_Underground _floor
+    2100012: Modern_Underground _fabric
+    2100014: Modern_Underground _detail
+    2100016: Modern_Underground _chrome
+    2100018: Modern_Underground _body
+    2100020: Underground_Tube_Station_white
+    2300000: Modern_Underground _arc
+    2300002: Modern_Underground _body
+    2300004: Modern_Underground _chrome
+    2300006: Modern_Underground _detail
+    2300008: Modern_Underground _fabric
+    2300010: Modern_Underground _floor
+    2300012: Modern_Underground _metal_black
+    2300014: Modern_Underground _sit
+    2300016: Modern_Underground _Train_cab
+    2300018: Modern_Underground _Train_light
+    2300020: Modern_Underground _windows
+    3300000: Modern_Underground _arc
+    3300002: Modern_Underground _body
+    3300004: Modern_Underground _chrome
+    3300006: Modern_Underground _detail
+    3300008: Modern_Underground _fabric
+    3300010: Modern_Underground _floor
+    3300012: Modern_Underground _metal_black
+    3300014: Modern_Underground _sit
+    3300016: Modern_Underground _Train_cab
+    3300018: Modern_Underground _Train_light
+    3300020: Modern_Underground _windows
+    4300000: Modern_Underground _windows
+    4300002: Modern_Underground _Train_light
+    4300004: Modern_Underground _Train_cab
+    4300006: Modern_Underground _sit
+    4300008: Modern_Underground _metal_black
+    4300010: Modern_Underground _floor
+    4300012: Modern_Underground _fabric
+    4300014: Modern_Underground _detail
+    4300016: Modern_Underground _chrome
+    4300018: Modern_Underground _body
+    4300020: Modern_Underground _arc
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _Train_cab
+    second: {fileID: 2100000, guid: c6e3d87122c740e45825d8d29ac53af4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _body
+    second: {fileID: 2100000, guid: 24d6fe50020e6a74eb95851e9d8c60f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _chrome
+    second: {fileID: 2100000, guid: 99e917a22df61c84a85d7ab305a3a398, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _detail
+    second: {fileID: 2100000, guid: c4fe8149b9e7ce04aba5d42f018f24c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _fabric
+    second: {fileID: 2100000, guid: 670a561639d8ed94082035e60e9e448a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _floor
+    second: {fileID: 2100000, guid: c61cfb4ea6989d14a8569c592d5d7099, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _metal_black
+    second: {fileID: 2100000, guid: 0c0c49ece75c0cd4ea354348c8fc3c72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _sit
+    second: {fileID: 2100000, guid: 62a4eee0aaa89fb46b4e459cfb717250, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Modern_Underground _windows
+    second: {fileID: 2100000, guid: 1a11c6d1501a35a4bb53c84c1f6e70b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Underground_Tube_Escalator_light
+    second: {fileID: 2100000, guid: 949312dbaa52edb4ab4077db0c725021, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Underground_Tube_Station_white
+    second: {fileID: 2100000, guid: 7756abf59cd99e845840ea619c09b524, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

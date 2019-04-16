@@ -6,8 +6,10 @@ public class S6_TrainMove : MonoBehaviour
 {
     Rigidbody rigidBody;
     AudioSource audioSource;
-    MeshRenderer meshRenderer;
-    TrainHandler trainHandler;
+    S6_TrainHandler trainHandler;
+
+    private bool isHiding = false;
+
 
     private Vector3 initialPosition;
 
@@ -15,17 +17,17 @@ public class S6_TrainMove : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
-        trainHandler = GameObject.Find("S6_TrainContainer").GetComponent<TrainHandler>();
+        trainHandler = GameObject.Find("S6_TrainContainer").GetComponent<S6_TrainHandler>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.I))
         {
             rigidBody.AddRelativeForce(Vector3.back);
         }
 
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.K))
         {
             rigidBody.AddRelativeForce(Vector3.forward);
         }
@@ -45,11 +47,12 @@ public class S6_TrainMove : MonoBehaviour
             rigidBody.velocity = new Vector3(0, 0, -35);
         }
 
-        //if (transform.position.z < trainHandler.hideTrainDistance)
-        //{
-        //    HideTrain();
-        //}
+        if (transform.position.z < trainHandler.hideTrainDistance)
+        {
+            gameObject.SetActive(false);
+        }
 
+        trainHandler.activeTrainDistance = transform.position.z;
     }
 
     public void Accelerate()
@@ -60,6 +63,8 @@ public class S6_TrainMove : MonoBehaviour
     public void HideTrain()
     {
         gameObject.SetActive(false);
+        Debug.Log("Hiding Train...");
+
     }
 
     public void ResetTrainPosition()

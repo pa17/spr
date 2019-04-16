@@ -8,9 +8,9 @@ public class S6_TrainHandler : MonoBehaviour
     public S6_TrainMove[] trainsMove;
     public int hideTrainDistance = 50;
 
-
     public GameObject[] trains;
     public int trainsIndex;
+    public float activeTrainDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,8 @@ public class S6_TrainHandler : MonoBehaviour
 
         trains = GameObject.FindGameObjectsWithTag("Train");
         trainsIndex = 0;
+
+        activeTrainDistance = 0;
 
         // Switch to the first one upon boot
         SwitchTrains();
