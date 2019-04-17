@@ -7,8 +7,11 @@ public class S6_Countdown : MonoBehaviour
 {
     S6_ScenarioHandler scenarioHandler;
 
-    public float countdownTime = 10.0f;
+    public float countdownTime = PARAMETERS.countdownTime;
     private float timeLeft;
+
+    public bool scenariosActive = false;
+
     public Text startText; // used for showing countdown from 3, 2, 1 
 
     void Start()
@@ -19,13 +22,26 @@ public class S6_Countdown : MonoBehaviour
 
     void Update()
     {
-        timeLeft -= Time.deltaTime;
-
-        startText.text = "Hello! Scenario: " + scenarioHandler.scenarioIndex + ". The simulation will start in..." + System.Environment.NewLine + (timeLeft).ToString("0");
-        if (timeLeft < 0)
+        if (scenariosActive)
         {
-            scenarioHandler.SwitchScenario();
-            this.gameObject.SetActive(false);
+            timeLeft -= Time.deltaTime;
+
+            if (scenarioHandler.scenarioIndex <= PARAMETERS.numberOfScenarios) {
+                startText.text = "Scenario " + scenarioHandler.scenarioIndex + " will start in " + (timeLeft).ToString("0") + " seconds.";
+                if (timeLeft < 0)
+                {
+                    scenarioHandler.SwitchScenario();
+                    this.gameObject.SetActive(false);
+                }
+            }
+
+
+            // Once all scenarios are run through... Take back to menu
+            else
+            {
+                this.gameObject.SetActive(false);
+            }
+
         }
     }
 

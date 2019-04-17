@@ -39,10 +39,6 @@ public class S6_ScenarioHandler : MonoBehaviour
         // ON START
 
         architecturalContainer.SetActive(false);
-        player.gameObject.transform.position = fixedPositionIllusion;
-        playerRb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
-
-
     }
 
     public void StopScenario()
@@ -55,9 +51,6 @@ public class S6_ScenarioHandler : MonoBehaviour
         }
         else if (scenarioIndex == 4)
         {
-            playerRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
-            player.gameObject.transform.position = fixedPositionObstruction;
-
             architecturalContainer.SetActive(true);
             trainHandler.StopTrains();
             trainHandler.ResetTrainPositions();

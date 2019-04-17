@@ -47,11 +47,6 @@ public class S6_TrainMove : MonoBehaviour
             rigidBody.velocity = new Vector3(0, 0, -35);
         }
 
-        if (transform.position.z < trainHandler.hideTrainDistance)
-        {
-            gameObject.SetActive(false);
-        }
-
         trainHandler.activeTrainDistance = transform.position.z;
     }
 
@@ -64,7 +59,6 @@ public class S6_TrainMove : MonoBehaviour
     {
         gameObject.SetActive(false);
         Debug.Log("Hiding Train...");
-
     }
 
     public void ResetTrainPosition()

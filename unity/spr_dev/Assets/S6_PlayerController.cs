@@ -5,8 +5,10 @@ public class S6_PlayerController : MonoBehaviour
 {
 
     public float speed;
+    public int mouseSensitivity = 4;
 
     private Rigidbody rb;
+    Quaternion rotateQuat;
 
     private S6_TrainHandler trainHandler;
 
@@ -19,16 +21,18 @@ public class S6_PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float forward = Input.GetAxis("Vertical");
+        float side = Input.GetAxis("Horizontal");
+        float rotY = Input.GetAxis("Mouse X");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        gameObject.transform.Rotate(0, rotY, 0);
+        
+        if (Input.GetKey(KeyCode.S)) {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
 
-        rb.AddForce(movement * speed);
+        Vector3 speed = new Vector3(side, 0.0f, forward);
 
-
-        // Make player follow train
-        // transform.position = new Vector3(0.4f, 1f, trainHandler.activeTrainDistance - 20);
-
+        rb.AddForce(gameObject.transform.rotation * speed);
     }
 }
