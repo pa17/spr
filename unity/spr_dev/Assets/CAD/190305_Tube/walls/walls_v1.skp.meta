@@ -6,16 +6,16 @@ SketchUpImporter:
   selectedNodes: 0000000001000000
   assetHash:
     serializedVersion: 2
-    Hash: 4a8cebd094ec1e79681a191cca3d7449
+    Hash: a090930d3f4ef0c18883168e0001b837
   longitude: -105.242139
   latitude: 40.018309
   northCorrection: -0
   fileUnit: 1
   sketchUpImportData:
     defaultCamera:
-      position: {x: -625.023, y: 2043.1821, z: 739.62164}
-      lookAt: {x: -628.9534, y: 1820.2394, z: 694.92737}
-      up: {x: 0.08588034, y: -0.19729227, z: 0.9765758}
+      position: {x: -0.7597807, y: 3.9362125, z: 2.1520782}
+      lookAt: {x: -0.7499929, y: 1.9693455, z: 1.010591}
+      up: {x: -0.007415801, y: -0.5019636, z: 0.86485696}
       fov: 35
       aspectRatio: 0
       orthoSize: 1
@@ -29,12 +29,17 @@ SketchUpImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh walls_v1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 6509345f02fa3e748ad760cc7cf569d8, type: 2}
   materials:
     importMaterials: 1
     materialName: 2
     materialSearch: 0
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -68,12 +73,12 @@ SketchUpImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    swapUVChannels: 0
-    generateSecondaryUV: 0
+    swapUVChannels: 1
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
     preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
