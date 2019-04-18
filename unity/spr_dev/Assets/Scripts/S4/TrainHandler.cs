@@ -20,7 +20,7 @@ public class TrainHandler : MonoBehaviour
         {
             if (train.gameObject.activeSelf == true)
             {
-                train.Accelerate();
+                // train.Accelerate();
             }
         }
     }
@@ -42,7 +42,7 @@ public class TrainHandler : MonoBehaviour
         {
             if (train.gameObject.activeSelf == true)
             {
-                train.ResetTrainPosition();
+                // train.ResetTrainPosition();
             }
         }
     }

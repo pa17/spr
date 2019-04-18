@@ -6,10 +6,11 @@ public class S6_TrainMove : MonoBehaviour
 {
     Rigidbody rigidBody;
     AudioSource audioSource;
-    S6_TrainHandler trainHandler;
+    GameObject trainContainer;
 
     private bool isHiding = false;
 
+    public float activeTrainDistance;
 
     private Vector3 initialPosition;
 
@@ -17,7 +18,7 @@ public class S6_TrainMove : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
-        trainHandler = GameObject.Find("S6_TrainContainer").GetComponent<S6_TrainHandler>();
+        trainContainer = GameObject.Find("S6_TrainContainer");
     }
 
     void Update()
@@ -47,12 +48,12 @@ public class S6_TrainMove : MonoBehaviour
             rigidBody.velocity = new Vector3(0, 0, -35);
         }
 
-        trainHandler.activeTrainDistance = transform.position.z;
+        activeTrainDistance = transform.position.z;
     }
 
-    public void Accelerate()
+    public void Accelerate(float direction)
     {
-        rigidBody.velocity = new Vector3(0, 0, -20);
+        rigidBody.velocity = new Vector3(0, 0, direction * PARAMETERS.TrainSpeed);
     }
 
     public void HideTrain()
@@ -61,14 +62,19 @@ public class S6_TrainMove : MonoBehaviour
         Debug.Log("Hiding Train...");
     }
 
-    public void ResetTrainPosition()
+    public void ResetTrainPosition(int direction)
     {
-        transform.position = initialPosition;
+        transform.position = new Vector3 (initialPosition.x, initialPosition.y, direction * initialPosition.z);
         rigidBody.velocity = new Vector3(0, 0, 0);
     }
 
     public void StopTrain()
     {
         rigidBody.velocity = new Vector3(0, 0, 0);
+    }
+
+    public void SwitchDirection(int direction)
+    {
+        trainContainer.transform.localScale = new Vector3(1, 1, direction);
     }
 }

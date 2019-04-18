@@ -5,7 +5,9 @@ using UnityEngine;
 public class S6_ResponseHandler : MonoBehaviour
 {
 
-    public float[] scenarioResponses = new float[6];
+    public float[] scenarioResponses = new float[PARAMETERS.numberOfScenarios];
+
+    public int[] directionResponses = { 0, 0, 0, 0, 0, 0 };
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +18,8 @@ public class S6_ResponseHandler : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void WriteResponse(int index, float responseTime)
     {
-        
+        scenarioResponses[index] = responseTime * directionResponses[index];
     }
 }

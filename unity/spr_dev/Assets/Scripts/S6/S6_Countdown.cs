@@ -5,29 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class S6_Countdown : MonoBehaviour
 {
-    S6_ScenarioHandler scenarioHandler;
+    S8_ScenarioHandler scenarioHandler;
 
     public float countdownTime = PARAMETERS.countdownTime;
     private float timeLeft;
 
-    public bool scenariosActive = false;
+    public bool isActive;
 
     public Text startText; // used for showing countdown from 3, 2, 1 
 
     void Start()
     {
         timeLeft = countdownTime;
-        scenarioHandler = GameObject.Find("S6_ScenarioContainer").GetComponent<S6_ScenarioHandler>();
+        scenarioHandler = GameObject.Find("S8_ScenarioContainer").GetComponent<S8_ScenarioHandler>();
+
+        isActive = false;
     }
 
     void Update()
     {
-        if (scenariosActive)
+        if (isActive)
         {
             timeLeft -= Time.deltaTime;
 
-            if (scenarioHandler.scenarioIndex <= PARAMETERS.numberOfScenarios) {
-                startText.text = "Scenario " + scenarioHandler.scenarioIndex + " will start in " + (timeLeft).ToString("0") + " seconds.";
+            if (scenarioHandler.scenarioIndex <= (PARAMETERS.numberOfScenarios - 1)) {
+                startText.text = "Scenario " + (scenarioHandler.scenarioIndex + 1) + " will start in... " + System.Environment.NewLine + System.Environment.NewLine + (timeLeft).ToString("0") + " seconds.";
                 if (timeLeft < 0)
                 {
                     scenarioHandler.SwitchScenario();
@@ -35,11 +37,11 @@ public class S6_Countdown : MonoBehaviour
                 }
             }
 
-
             // Once all scenarios are run through... Take back to menu
             else
             {
-                this.gameObject.SetActive(false);
+                startText.text = "Submitting results..." + System.Environment.NewLine + System.Environment.NewLine + "You are taken back to the main menu.";
+                // Waiting for user input to submit.
             }
 
         }

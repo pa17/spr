@@ -13,9 +13,6 @@ public class S6_ScenarioHandler : MonoBehaviour
     GameObject player;
     Rigidbody playerRb;
 
-    public Vector3 fixedPositionIllusion;
-    public Vector3 fixedPositionObstruction;
-
     public S6_Timer timer;
 
     public int scenarioIndex;
@@ -117,6 +114,11 @@ public class S6_ScenarioHandler : MonoBehaviour
             trainHandler.AccelerateTrains();
 
             scenarioIndex += 1;
+        }
+
+        else
+        {
+            scenarioIndex += 10;
         }
     }
 }

@@ -4,13 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class S6_PlayerInterrupt : MonoBehaviour
-{
-    S6_ScenarioHandler scenarioHandler;
-    S6_Countdown countdown;
+{   
+    // NON UI
+    S8_ScenarioHandler scenarioHandler;
     S6_SendToGoogle sendToGoogle;
+    S6_ResponseHandler response;
 
-    FreeNavigateHandler freeNavigateHandler;
-
+    // UI Handlers
+    WelcomeHandler welcome;
+    S6_Countdown countdown;
+    FreeNavigateHandler freeNavigate;
+    // UI GameObjects
     GameObject countdownTarget;
     GameObject welcomeTarget;
     GameObject freeNavigateTarget;
@@ -18,34 +22,58 @@ public class S6_PlayerInterrupt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        countdownTarget = GameObject.Find("Countdown");
-        welcomeTarget = GameObject.Find("Welcome");
-        freeNavigateTarget = GameObject.Find("Free Navigate");
-
-
-        scenarioHandler = GameObject.Find("S6_ScenarioContainer").GetComponent<S6_ScenarioHandler>();
-        countdown = GetComponentInChildren<S6_Countdown>();
-        freeNavigateHandler = GetComponentInChildren<FreeNavigateHandler>();
+        // NON UI
+        scenarioHandler = GameObject.Find("S8_ScenarioContainer").GetComponent<S8_ScenarioHandler>();
         sendToGoogle = GetComponentInChildren<S6_SendToGoogle>();
+        response = GetComponentInChildren<S6_ResponseHandler>();
+
+        // UI Handlers
+        welcome = GetComponentInChildren<WelcomeHandler>();
+        countdown = GetComponentInChildren<S6_Countdown>();
+        freeNavigate = GetComponentInChildren<FreeNavigateHandler>();
+        // UI GameObjects
+        welcomeTarget = GameObject.Find("Welcome");
+        countdownTarget = GameObject.Find("Countdown");
+        freeNavigateTarget = GameObject.Find("Free Navigate");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (countdown.scenariosActive) {
+        if (welcome.isActive)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                countdown.isActive = true;
+
+                welcome.isActive = false;
+                welcomeTarget.SetActive(false);
+            }
+
+            else if (Input.GetMouseButtonUp(1))
+            {
+                freeNavigate.isActive = true;
+
+                welcome.isActive = false;
+                welcomeTarget.SetActive(false);
+            }
+        }
+
+        // SCENARIOS
+        else if (countdown.isActive) {
             if (Input.GetMouseButtonDown(0))
             {
-
-                // TODO: Log A
+                // Player perceived train from LEFT
                 Debug.Log("A");
-
+                response.directionResponses[scenarioHandler.scenarioIndex] = 1;
             }
 
             else if(Input.GetMouseButtonDown(1))
             {
-                // TODO: Log B
+                // Player perceived train from RIGHT
                 Debug.Log("B");
 
+                response.directionResponses[scenarioHandler.scenarioIndex] = -1;
             }
             else if (Input.GetMouseButtonDown(2))
             {
@@ -53,30 +81,42 @@ public class S6_PlayerInterrupt : MonoBehaviour
                 scenarioHandler.StopScenario();
             }
 
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.KeypadPlus))
             {
-                scenarioHandler.trainHandler.ResetTrainPositions();
                 countdown.ResetCountdown();
             }
 
-            else if(Input.GetKeyDown(KeyCode.F12))
+            else if(Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 sendToGoogle.Send();
-            }
 
-            // Test over...
-            if (scenarioHandler.scenarioIndex == 6)
-            {
+                countdown.isActive = false;
                 countdownTarget.SetActive(false);
+
                 welcomeTarget.SetActive(true);
+                welcome.isActive = true;
             }
         }
 
-        else if (freeNavigateHandler.freeNavigateActive)
+        // NAVIGATE
+        else if (freeNavigate.isActive)
         {
             // TODO: What happens with mouse clicks
 
-            Debug.Log("TODO: What happens with mouse clicks");
+            if (Input.GetMouseButtonUp(0))
+            {
+                // TODO: Implement interaction
+                Debug.Log("TODO: Implement interaction");
+            }
+
+            else if (Input.GetMouseButtonUp(1))
+            {
+                freeNavigate.isActive = false;
+                freeNavigateTarget.SetActive(false);
+
+                welcome.isActive = true;
+                welcomeTarget.SetActive(true);
+            }
         }
     }
 }

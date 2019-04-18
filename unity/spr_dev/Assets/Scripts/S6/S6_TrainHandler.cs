@@ -6,7 +6,7 @@ public class S6_TrainHandler : MonoBehaviour
 {
 
     public S6_TrainMove[] trainsMove;
-    public int hideTrainDistance = 50;
+    public float hideTrainDistance = PARAMETERS.HideTrainDistance;
 
     public GameObject[] trains;
     public int trainsIndex;
@@ -57,7 +57,7 @@ public class S6_TrainHandler : MonoBehaviour
         {
             if (train.gameObject.activeSelf == true)
             {
-                train.Accelerate();
+                // train.Accelerate();
             }
         }
     }
@@ -79,7 +79,7 @@ public class S6_TrainHandler : MonoBehaviour
         {
             if (train.gameObject.activeSelf == true)
             {
-                train.ResetTrainPosition();
+                // train.ResetTrainPosition();
             }
         }
     }

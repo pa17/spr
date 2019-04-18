@@ -5,7 +5,7 @@ using UnityEngine;
 public class S6_Timer : MonoBehaviour
 {
     S6_ResponseHandler response;
-    S6_ScenarioHandler scenarioHandler;
+    S8_ScenarioHandler scenarioHandler;
     
     public float timePassed = 0;
     public float timer = 0;
@@ -13,7 +13,7 @@ public class S6_Timer : MonoBehaviour
     void Start()
     {
         response = GameObject.Find("Response").GetComponent<S6_ResponseHandler>();
-        scenarioHandler = GetComponentInParent<S6_ScenarioHandler>();
+        scenarioHandler = GetComponentInParent<S8_ScenarioHandler>();
     }
 
     public void ResetTimer()
@@ -25,15 +25,12 @@ public class S6_Timer : MonoBehaviour
     {
         Debug.Log("The time taken until train perceived as passed: " + (timePassed - timer));
 
-        // Write time taken to responses array. Minus one because the index is already incremented at the time you press space.
-        response.scenarioResponses[scenarioHandler.scenarioIndex - 1] = timePassed - timer;
+        // Write time taken to responses array. Multiplied by 1 if Left was chosen, by -1 if Right was chosen
+        response.WriteResponse(scenarioHandler.scenarioIndex, timePassed - timer);
     }
-
     // Update is called once per frame
     void Update()
     {
         timePassed += Time.deltaTime;
-
-
     }
 }
