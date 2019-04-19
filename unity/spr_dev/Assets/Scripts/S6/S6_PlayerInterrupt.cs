@@ -9,6 +9,7 @@ public class S6_PlayerInterrupt : MonoBehaviour
     S8_ScenarioHandler scenarioHandler;
     S6_SendToGoogle sendToGoogle;
     S6_ResponseHandler response;
+    S6_PlayerController player;
 
     // UI Handlers
     WelcomeHandler welcome;
@@ -26,6 +27,7 @@ public class S6_PlayerInterrupt : MonoBehaviour
         scenarioHandler = GameObject.Find("S8_ScenarioContainer").GetComponent<S8_ScenarioHandler>();
         sendToGoogle = GetComponentInChildren<S6_SendToGoogle>();
         response = GetComponentInChildren<S6_ResponseHandler>();
+        player = GetComponent<S6_PlayerController>();
 
         // UI Handlers
         welcome = GetComponentInChildren<WelcomeHandler>();
@@ -35,6 +37,9 @@ public class S6_PlayerInterrupt : MonoBehaviour
         welcomeTarget = GameObject.Find("Welcome");
         countdownTarget = GameObject.Find("Countdown");
         freeNavigateTarget = GameObject.Find("Free Navigate");
+
+        // Freeze player
+        player.FreezePlayer();
     }
 
     // Update is called once per frame
@@ -56,6 +61,8 @@ public class S6_PlayerInterrupt : MonoBehaviour
 
                 welcome.isActive = false;
                 welcomeTarget.SetActive(false);
+
+                player.UnfreezePlayer();
             }
         }
 
@@ -95,6 +102,8 @@ public class S6_PlayerInterrupt : MonoBehaviour
 
                 welcomeTarget.SetActive(true);
                 welcome.isActive = true;
+
+                player.UnfreezePlayer();
             }
         }
 
@@ -116,6 +125,9 @@ public class S6_PlayerInterrupt : MonoBehaviour
 
                 welcome.isActive = true;
                 welcomeTarget.SetActive(true);
+
+                player.ResetPlayer();
+                player.FreezePlayer();
             }
         }
     }

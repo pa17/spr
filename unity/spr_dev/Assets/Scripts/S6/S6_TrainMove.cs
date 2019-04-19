@@ -7,18 +7,27 @@ public class S6_TrainMove : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
     GameObject trainContainer;
+    Transform trainLightTop, trainLightBottom;
 
     private bool isHiding = false;
 
     public float activeTrainDistance;
 
     private Vector3 initialPosition;
+    private Vector3 trainLightBottomRot, trainLightTopRot;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
-        initialPosition = transform.position;
         trainContainer = GameObject.Find("S6_TrainContainer");
+        trainLightBottom = GameObject.Find("TrainLightBottom").GetComponent<Transform>();
+        trainLightTop = GameObject.Find("TrainLightTop").GetComponent<Transform>();
+
+        initialPosition = transform.position;
+        trainLightBottomRot = trainLightBottom.eulerAngles;
+        trainLightTopRot = trainLightTop.eulerAngles;
+        Debug.Log(trainLightTopRot);
+
     }
 
     void Update()
@@ -76,5 +85,16 @@ public class S6_TrainMove : MonoBehaviour
     public void SwitchDirection(int direction)
     {
         trainContainer.transform.localScale = new Vector3(1, 1, direction);
+
+        if (direction == 1)
+        {
+            trainLightBottom.rotation = Quaternion.Euler(trainLightBottomRot);
+            trainLightTop.rotation = Quaternion.Euler(trainLightTopRot);
+        }
+        else
+        {
+            trainLightBottom.rotation = Quaternion.Euler(180 - trainLightBottomRot.x, trainLightBottomRot.y, trainLightBottomRot.z);
+            trainLightTop.rotation = Quaternion.Euler(180 - trainLightTopRot.x, trainLightTopRot.y, trainLightTopRot.z);
+        }
     }
 }

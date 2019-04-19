@@ -7,11 +7,19 @@ public class S6_PlayerController : MonoBehaviour
     public float speed;
     public int mouseSensitivity = PARAMETERS.MouseSensitivity;
 
-    private Rigidbody rb;
+    private bool isFrozen = true;
+    public Rigidbody rb;
 
-    void Start()
+    private Vector3 initialPosition;
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        initialPosition = transform.position;
     }
 
     void FixedUpdate()
@@ -20,14 +28,36 @@ public class S6_PlayerController : MonoBehaviour
         float side = Input.GetAxis("Horizontal");
         float rotY = Input.GetAxis("Mouse X");
 
-        gameObject.transform.Rotate(0, rotY, 0);
-        
-        if (Input.GetKey(KeyCode.S)) {
-            rb.velocity = new Vector3(0, 0, 0);
+        gameObject.transform.Rotate(0, rotY * mouseSensitivity, 0);
+
+        if (!isFrozen)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.velocity = new Vector3(0, 0, 0);
+            }
+
+            Vector3 speed = new Vector3(side, 0.0f, forward);
+
+            rb.AddForce(gameObject.transform.rotation * speed);
         }
+    }
 
-        Vector3 speed = new Vector3(side, 0.0f, forward);
+    public void FreezePlayer()
+    {
+        isFrozen = true;
+    }
 
-        rb.AddForce(gameObject.transform.rotation * speed);
+    public void UnfreezePlayer()
+    {
+        isFrozen = false;
+    }
+
+    public void ResetPlayer()
+    {
+        Debug.Log("Resettin");
+        transform.position = new Vector3(-2.13f, 1, 0);
+        transform.rotation = Quaternion.Euler(0, 90, 0);
+        rb.velocity = new Vector3(0, 0, 0);
     }
 }
