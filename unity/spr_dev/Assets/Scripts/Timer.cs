@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S6_Timer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
-    S6_ResponseHandler response;
-    S8_ScenarioHandler scenarioHandler;
+    ResponseHandler response;
+    ScenarioHandler scenarioHandler;
     
     public float timePassed = 0;
     public float timer = 0;
 
     void Start()
     {
-        response = GameObject.Find("Response").GetComponent<S6_ResponseHandler>();
-        scenarioHandler = GetComponentInParent<S8_ScenarioHandler>();
+        response = GameObject.Find("Response").GetComponent<ResponseHandler>();
+        scenarioHandler = GetComponentInParent<ScenarioHandler>();
     }
 
     public void ResetTimer()

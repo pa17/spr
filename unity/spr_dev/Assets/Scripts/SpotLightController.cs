@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpotLightController : MonoBehaviour
 {
-    S6_TrainMove train;
+    TrainMove train;
     Light spotlight;
 
     // Start is called before the first frame update
     void Start()
     {
-        train = GameObject.Find("TrainControl").GetComponent<S6_TrainMove>();
+        train = GameObject.Find("TrainControl").GetComponent<TrainMove>();
         spotlight = GetComponent<Light>();
     }
 

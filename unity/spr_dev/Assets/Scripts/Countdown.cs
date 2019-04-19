@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class S6_Countdown : MonoBehaviour
+public class Countdown : MonoBehaviour
 {
-    S8_ScenarioHandler scenarioHandler;
+    ScenarioHandler scenarioHandler;
 
     public float countdownTime = PARAMETERS.countdownTime;
     private float timeLeft;
@@ -17,7 +17,7 @@ public class S6_Countdown : MonoBehaviour
     void Start()
     {
         timeLeft = countdownTime;
-        scenarioHandler = GameObject.Find("S8_ScenarioContainer").GetComponent<S8_ScenarioHandler>();
+        scenarioHandler = GameObject.Find("ScenarioContainer").GetComponent<ScenarioHandler>();
 
         isActive = false;
     }

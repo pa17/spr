@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class S6_PlayerInterrupt : MonoBehaviour
+public class PlayerInterrupt : MonoBehaviour
 {   
     // NON UI
-    S8_ScenarioHandler scenarioHandler;
-    S6_SendToGoogle sendToGoogle;
-    S6_ResponseHandler response;
-    S6_PlayerController player;
+    ScenarioHandler scenarioHandler;
+    SendToGoogle sendToGoogle;
+    ResponseHandler response;
+    PlayerController player;
 
     // UI Handlers
     WelcomeHandler welcome;
-    S6_Countdown countdown;
+    Countdown countdown;
     FreeNavigateHandler freeNavigate;
     // UI GameObjects
     GameObject countdownTarget;
@@ -24,14 +24,14 @@ public class S6_PlayerInterrupt : MonoBehaviour
     void Start()
     {
         // NON UI
-        scenarioHandler = GameObject.Find("S8_ScenarioContainer").GetComponent<S8_ScenarioHandler>();
-        sendToGoogle = GetComponentInChildren<S6_SendToGoogle>();
-        response = GetComponentInChildren<S6_ResponseHandler>();
-        player = GetComponent<S6_PlayerController>();
+        scenarioHandler = GameObject.Find("ScenarioContainer").GetComponent<ScenarioHandler>();
+        sendToGoogle = GetComponentInChildren<SendToGoogle>();
+        response = GetComponentInChildren<ResponseHandler>();
+        player = GetComponent<PlayerController>();
 
         // UI Handlers
         welcome = GetComponentInChildren<WelcomeHandler>();
-        countdown = GetComponentInChildren<S6_Countdown>();
+        countdown = GetComponentInChildren<Countdown>();
         freeNavigate = GetComponentInChildren<FreeNavigateHandler>();
         // UI GameObjects
         welcomeTarget = GameObject.Find("Welcome");

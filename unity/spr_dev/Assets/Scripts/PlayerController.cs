@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class S6_PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     public float speed;
@@ -55,7 +55,6 @@ public class S6_PlayerController : MonoBehaviour
 
     public void ResetPlayer()
     {
-        Debug.Log("Resettin");
         transform.position = new Vector3(-2.13f, 1, 0);
         transform.rotation = Quaternion.Euler(0, 90, 0);
         rb.velocity = new Vector3(0, 0, 0);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S6_TrainMove : MonoBehaviour
+public class TrainMove : MonoBehaviour
 {
     Rigidbody rigidBody;
     AudioSource audioSource;
@@ -19,15 +19,13 @@ public class S6_TrainMove : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
-        trainContainer = GameObject.Find("S6_TrainContainer");
+        trainContainer = GameObject.Find("TrainContainer");
         trainLightBottom = GameObject.Find("TrainLightBottom").GetComponent<Transform>();
         trainLightTop = GameObject.Find("TrainLightTop").GetComponent<Transform>();
 
         initialPosition = transform.position;
         trainLightBottomRot = trainLightBottom.eulerAngles;
         trainLightTopRot = trainLightTop.eulerAngles;
-        Debug.Log(trainLightTopRot);
-
     }
 
     void Update()

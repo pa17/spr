@@ -5,7 +5,7 @@ using UnityEngine;
 using Oculus.Platform;
 using Oculus.Platform.Models;
 
-public class PlayerController : SocialPlatformManager
+public class PlayerControllerOCULUS : SocialPlatformManager
 {
 
     // Secondary camera to debug and view the whole scene from above

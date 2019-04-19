@@ -16,8 +16,6 @@ public class FreeNavigateHandler : MonoBehaviour
     void Start()
     {
         timeLeft = countdownTime;
-
-        Debug.Log("For some reasons it never goes into the free navigate update loop if right button pressed.");
     }
 
     // Update is called once per frame

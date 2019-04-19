@@ -14,7 +14,7 @@ public class ReflectionProbeController : MonoBehaviour
     void Start()
     {
         reflectionProbe = GetComponent<ReflectionProbe>();
-        player = GameObject.Find("S6_Player");
+        player = GameObject.Find("Player");
 
         startPosition = reflectionProbe.transform.position;
     }

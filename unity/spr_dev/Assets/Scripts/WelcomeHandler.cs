@@ -7,13 +7,13 @@ public class WelcomeHandler : MonoBehaviour
 {
     public bool isActive = true;
 
-    S6_Countdown countdown;
+    Countdown countdown;
     FreeNavigateHandler freeNavigateHandler;
 
     // Start is called before the first frame update
     void Start()
     {
-        countdown = GameObject.Find("Countdown").GetComponent<S6_Countdown>();
+        countdown = GameObject.Find("Countdown").GetComponent<Countdown>();
         freeNavigateHandler = GameObject.Find("Free Navigate").GetComponent<FreeNavigateHandler>();
     }
 
