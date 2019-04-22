@@ -4,28 +4,33 @@ public static class PARAMETERS
 {
     // Platform & Train Distances
     public static float PlatformLength = 121.5f;
-    public static float TrainStartDistance = 300f;
-
-    public static float TrainDistanceToEntry = TrainStartDistance - PlatformLength;
+    public static float TrainStartDistance = 500f;
     public static float TunnelLength = TrainStartDistance - PlatformLength / 2;
 
     // Train
     public static float TrainSpeed = -20f;
-
-    public static float HideTrainDistance = 50;
-
 
     // Test scenario
     public static float countdownTime = 3; // Time from scenario announcement to start
     public static int numberOfScenarios = 6;
     public static int[] directions = { 1, -1, -1, -1, 1, 1 };     // Direction: Left is 1, Right is -1.
 
-
     // Player
     public static int MouseSensitivity = 4;
 
-    // Deception
-    public static float spotlightDeceptionFactor = 2; // Factor by which wrong side gets lighter faster
+    // Audio Illusion
+    public static float loudspeakerDeceptionGain = 2; // Factor by which wrong side gets louder faster
 
-    public static float loudspeakerDeceptionGain = 2; // Factpr by which wrong side gets louder faster
+    // Light Illusion
+    public static int TriggerDistance = 120; // Distance from end of tunnel when light illusion is triggered
+    public static int LightStart = 0;
+    public static int LightEnd = 150;
+    public static float LightActivationTime = 5; // Light moves with x metres per second
+    public static float LightActivationSpeed = (LightEnd - LightStart) / LightActivationTime;
+
+    // Chuebel
+    //public static int spotLightStart = 90;
+    //public static int spotLightEnd = 10;
+    //public static float spotLightDeceptionOffset = 0.0f; // Distance at which spot
+    //public static float pointLightDeceptionFactor = 2; // Factor by which wrong side gets lighter faster
 }

@@ -7,14 +7,14 @@ public class TrainMove : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
     GameObject trainContainer;
-    Transform trainLightTop, trainLightBottom;
+    Transform trainLightTop, trainLightBottom, trainLightDirectional;
 
     private bool isHiding = false;
 
     public float activeTrainDistance;
 
     private Vector3 initialPosition;
-    private Vector3 trainLightBottomRot, trainLightTopRot;
+    private Vector3 trainLightBottomRot, trainLightTopRot, trainLightDirectionalRot;
 
     void Start()
     {
@@ -22,10 +22,14 @@ public class TrainMove : MonoBehaviour
         trainContainer = GameObject.Find("TrainContainer");
         trainLightBottom = GameObject.Find("TrainLightBottom").GetComponent<Transform>();
         trainLightTop = GameObject.Find("TrainLightTop").GetComponent<Transform>();
+        trainLightDirectional = GameObject.Find("TrainLightDirectional").GetComponent<Transform>();
+
+        //transform.position = new Vector3(0, 0, PARAMETERS.TrainStartDistance);
 
         initialPosition = transform.position;
         trainLightBottomRot = trainLightBottom.eulerAngles;
         trainLightTopRot = trainLightTop.eulerAngles;
+        trainLightDirectionalRot = trainLightDirectional.eulerAngles;
     }
 
     void Update()
@@ -88,11 +92,13 @@ public class TrainMove : MonoBehaviour
         {
             trainLightBottom.rotation = Quaternion.Euler(trainLightBottomRot);
             trainLightTop.rotation = Quaternion.Euler(trainLightTopRot);
+            trainLightDirectional.rotation = Quaternion.Euler(trainLightDirectionalRot);
         }
         else
         {
             trainLightBottom.rotation = Quaternion.Euler(180 - trainLightBottomRot.x, trainLightBottomRot.y, trainLightBottomRot.z);
             trainLightTop.rotation = Quaternion.Euler(180 - trainLightTopRot.x, trainLightTopRot.y, trainLightTopRot.z);
+            trainLightDirectional.rotation = Quaternion.Euler(180 - trainLightDirectionalRot.x, trainLightDirectionalRot.y, trainLightDirectionalRot.z);
         }
     }
 }
