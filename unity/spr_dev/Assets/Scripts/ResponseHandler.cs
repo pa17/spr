@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ResponseHandler : MonoBehaviour
 {
-
-    public float[] scenarioResponses = new float[PARAMETERS.numberOfScenarios];
-
+    // Extra entry is Z Position!
+    public float[] scenarioResponses = new float[PARAMETERS.numberOfScenarios + 1];
     public int[] directionResponses = { 0, 0, 0, 0, 0, 0 };
 
     // Start is called before the first frame update
@@ -21,5 +20,10 @@ public class ResponseHandler : MonoBehaviour
     public void WriteResponse(int index, float responseTime)
     {
         scenarioResponses[index] = responseTime * directionResponses[index];
+    }
+
+    public void WriteChosenPosition(float zPosition)
+    {
+        scenarioResponses[6] = zPosition;
     }
 }

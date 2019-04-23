@@ -25,7 +25,7 @@ public class FreeNavigateHandler : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
 
-            navigateText.text = "Please explore the station freely." + System.Environment.NewLine + System.Environment.NewLine + "- Left click to interact" + System.Environment.NewLine + "- Middle click to change intervention" + System.Environment.NewLine + "- Right click to exit";
+            navigateText.text = "Please explore the station freely." + System.Environment.NewLine + System.Environment.NewLine + "- Left click to change architectural intervention" + System.Environment.NewLine + "- Right click to exit";
             if (timeLeft < 0)
             {
                 navigateText.text = " ";

@@ -6,8 +6,13 @@ public class ScenarioHandler : MonoBehaviour
 {
     public TrainMove train;
     public Timer timer;
+    NavigateToFixedHandler navigateToFixedHandler;
+    GameObject navigateToFixedTarget;
+
+    PlayerController player;
 
     public int scenarioIndex = 0;
+    public bool locationChosen = false;
 
     GameObject[] scenarios;
 
@@ -15,6 +20,10 @@ public class ScenarioHandler : MonoBehaviour
     void Start()
     {
         train = GameObject.Find("TrainControl").GetComponent<TrainMove>();
+        navigateToFixedHandler = GameObject.Find("Navigate To Fixed").GetComponent<NavigateToFixedHandler>();
+        navigateToFixedTarget = GameObject.Find("Navigate To Fixed");
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+
         timer = GetComponent<Timer>();
 
         // Get list of child GameObjects (scenarios)
@@ -41,12 +50,21 @@ public class ScenarioHandler : MonoBehaviour
 
             scenarioIndex += 1;
         }
+
+        // Player choose location
+        if (scenarioIndex == 3)
+        {
+            navigateToFixedTarget.SetActive(true);
+            navigateToFixedHandler.SetText();
+            // Disable lights for scenario 4 - 6
+            train.DisableLights();
+            player.UnfreezePlayer();
+        }
     }
 
     public void SwitchScenario()
     // WHAT HAPPENS WHEN THE SCENARIO STARTS
     {
-        //  Scenario 1: Control
         if (scenarioIndex <= PARAMETERS.numberOfScenarios)
         {
             scenarios[scenarioIndex].SetActive(true);
@@ -56,6 +74,7 @@ public class ScenarioHandler : MonoBehaviour
             train.Accelerate(PARAMETERS.directions[scenarioIndex]);
 
             timer.ResetTimer();
+            Debug.Log("Timer RESET: " + scenarioIndex);
         }
 
         else

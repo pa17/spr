@@ -5,10 +5,9 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed;
-    public int mouseSensitivity = PARAMETERS.MouseSensitivity;
 
-    public bool mouseEnabled;
     private bool isFrozen = true;
+
     public Rigidbody rb;
 
     private Vector3 initialPosition;
@@ -25,23 +24,16 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float forward = Input.GetAxis("Vertical");
-        float side = Input.GetAxis("Horizontal");
-        float rotY = Input.GetAxis("Mouse X");
-        
-        if (mouseEnabled)
-        {
-            gameObject.transform.Rotate(0, rotY * mouseSensitivity, 0);
-        }
+        float forward = Input.GetAxis("Horizontal");
 
         if (!isFrozen)
         {
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.DownArrow))
             {
                 rb.velocity = new Vector3(0, 0, 0);
             }
 
-            Vector3 speed = new Vector3(side, 0.0f, forward);
+            Vector3 speed = new Vector3(forward, 0.0f, 0.0f);
 
             rb.AddForce(gameObject.transform.rotation * speed);
         }
@@ -49,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     public void FreezePlayer()
     {
+        rb.velocity = new Vector3(0, 0, 0);
         isFrozen = true;
     }
 

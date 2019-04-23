@@ -101,4 +101,10 @@ public class TrainMove : MonoBehaviour
             trainLightDirectional.rotation = Quaternion.Euler(180 - trainLightDirectionalRot.x, trainLightDirectionalRot.y, trainLightDirectionalRot.z);
         }
     }
+
+    public void DisableLights()
+    {
+        trainLightBottom.gameObject.SetActive(false);
+        trainLightTop.gameObject.SetActive(false);
+    }
 }

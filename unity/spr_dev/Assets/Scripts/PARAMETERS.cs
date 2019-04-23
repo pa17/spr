@@ -13,7 +13,7 @@ public static class PARAMETERS
     // Test scenario
     public static float countdownTime = 3; // Time from scenario announcement to start
     public static int numberOfScenarios = 6;
-    public static int[] directions = { 1, -1, -1, -1, 1, 1 };     // Direction: Left is 1, Right is -1.
+    public static int[] directions = { 1, -1, -1, 1, 1, 1 };     // Direction: Left is 1, Right is -1.
 
     // Player
     public static int MouseSensitivity = 4;
@@ -25,12 +25,6 @@ public static class PARAMETERS
     public static int TriggerDistance = 120; // Distance from end of tunnel when light illusion is triggered
     public static int LightStart = 0;
     public static int LightEnd = 150;
-    public static float LightActivationTime = 5; // Light moves with x metres per second
-    public static float LightActivationSpeed = (LightEnd - LightStart) / LightActivationTime;
-
-    // Chuebel
-    //public static int spotLightStart = 90;
-    //public static int spotLightEnd = 10;
-    //public static float spotLightDeceptionOffset = 0.0f; // Distance at which spot
-    //public static float pointLightDeceptionFactor = 2; // Factor by which wrong side gets lighter faster
+    public static float LightActivationTime = 5; 
+    public static float LightActivationSpeed = (LightEnd - LightStart) / LightActivationTime; // Light moves with x metres per second
 }
