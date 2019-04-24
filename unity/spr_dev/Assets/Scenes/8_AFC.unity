@@ -6472,7 +6472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290256247}
   m_LocalRotation: {x: 0.02443219, y: 0, z: 0, w: 0.9997015}
-  m_LocalPosition: {x: 3, y: 1, z: -130}
+  m_LocalPosition: {x: 3, y: 1.5, z: -150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414534436}
@@ -9359,6 +9359,7 @@ GameObject:
   - component: {fileID: 431884179}
   - component: {fileID: 431884180}
   - component: {fileID: 431884181}
+  - component: {fileID: 431884182}
   m_Layer: 0
   m_Name: ArtificialLoudspeaker
   m_TagString: Untagged
@@ -9391,7 +9392,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 574d95b28d239634483d947bd2e98156, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -9406,7 +9407,7 @@ AudioSource:
   rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -9489,13 +9490,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableSpatialization: 1
-  gain: 2
+  gain: 5.505536
   useInvSqr: 0
   near: 1
-  far: 10
+  far: 150
   volumetricRadius: 0
   reverbSend: 0
   enableRfl: 0
+--- !u!114 &431884182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431884178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081fbfaf5899def4ba22b4787c3195a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &433733009
 GameObject:
   m_ObjectHideFlags: 0
@@ -41465,6 +41478,7 @@ GameObject:
   - component: {fileID: 1940679473}
   - component: {fileID: 1940679475}
   - component: {fileID: 1940679474}
+  - component: {fileID: 1940679476}
   m_Layer: 0
   m_Name: ArtificialLoudspeaker
   m_TagString: Untagged
@@ -41499,10 +41513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableSpatialization: 1
-  gain: 2
+  gain: 0
   useInvSqr: 0
   near: 1
-  far: 10
+  far: 150
   volumetricRadius: 0
   reverbSend: 0
   enableRfl: 0
@@ -41517,7 +41531,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 574d95b28d239634483d947bd2e98156, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -41532,7 +41546,7 @@ AudioSource:
   rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -41602,6 +41616,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1940679476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940679472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081fbfaf5899def4ba22b4787c3195a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1944056542 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8775570879098133860, guid: c3bd212b132bdf44680bfa8b093b0448,
@@ -45255,6 +45281,54 @@ PrefabInstance:
     - target: {fileID: 6688002752558852019, guid: 51a80a23013b4254e9b0b67c47fd9697,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338644245, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338644245, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338644245, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338644245, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338644245, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338644245, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: MaxDistance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600864147161284760, guid: 51a80a23013b4254e9b0b67c47fd9697,
+        type: 3}
+      propertyPath: enableSpatialization
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600864147161284760, guid: 51a80a23013b4254e9b0b67c47fd9697,
+        type: 3}
+      propertyPath: gain
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600864147161284760, guid: 51a80a23013b4254e9b0b67c47fd9697,
+        type: 3}
+      propertyPath: far
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600864147161284760, guid: 51a80a23013b4254e9b0b67c47fd9697,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639526792, guid: 51a80a23013b4254e9b0b67c47fd9697, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:

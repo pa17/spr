@@ -18,7 +18,7 @@ public class NavigateToFixedHandler : MonoBehaviour
     // Update is called once per frame
     public void SetText()
     {
-        navigateToFixedText.text = "Navigate to wher you can see a train coming from the left the quickest (using the arrow keys). Press down arrow to stop and then tell your supervisor to confirm.";
+        navigateToFixedText.text = "The next trains are coming from the left. Navigate to where you think you can spot them the earliest (using the arrow keys). Press down arrow to stop and then tell your supervisor to confirm.";
         isActive = true;
     }
 }

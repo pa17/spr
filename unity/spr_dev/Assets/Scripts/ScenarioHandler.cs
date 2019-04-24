@@ -8,7 +8,8 @@ public class ScenarioHandler : MonoBehaviour
     public Timer timer;
     NavigateToFixedHandler navigateToFixedHandler;
     GameObject navigateToFixedTarget;
-
+    AudioSource trainAudio;
+    AudioRenderer audioRenderer;
     PlayerController player;
 
     public int scenarioIndex = 0;
@@ -20,9 +21,11 @@ public class ScenarioHandler : MonoBehaviour
     void Start()
     {
         train = GameObject.Find("TrainControl").GetComponent<TrainMove>();
+        trainAudio = GameObject.Find("TrainControl").GetComponent<AudioSource>();
         navigateToFixedHandler = GameObject.Find("Navigate To Fixed").GetComponent<NavigateToFixedHandler>();
         navigateToFixedTarget = GameObject.Find("Navigate To Fixed");
         player = GameObject.Find("Player").GetComponent<PlayerController>();
+        audioRenderer = GameObject.Find("MainCamera").GetComponent<AudioRenderer>();
 
         timer = GetComponent<Timer>();
 
@@ -43,7 +46,10 @@ public class ScenarioHandler : MonoBehaviour
         if (scenarioIndex <= PARAMETERS.numberOfScenarios)
         {
             train.StopTrain();
+            trainAudio.Stop();
             train.ResetTrainPosition(PARAMETERS.directions[scenarioIndex]);
+
+            //audioRenderer.Save("test.wav");
 
             // Turn off scenario just passed
             scenarios[scenarioIndex].SetActive(false);
@@ -68,11 +74,17 @@ public class ScenarioHandler : MonoBehaviour
         if (scenarioIndex <= PARAMETERS.numberOfScenarios)
         {
             scenarios[scenarioIndex].SetActive(true);
-            SwitchScenarioDirection();
 
+            if (scenarioIndex == 1 | scenarioIndex == 2)
+            {
+                ArtificialLoudspeakerHandler scenarioAudio = scenarios[scenarioIndex].GetComponentInChildren<ArtificialLoudspeakerHandler>();
+                scenarioAudio.Play();
+            }
+
+            trainAudio.Play();
+            SwitchScenarioDirection();
             train.SwitchDirection(PARAMETERS.directions[scenarioIndex]);
             train.Accelerate(PARAMETERS.directions[scenarioIndex]);
-
             timer.ResetTimer();
             Debug.Log("Timer RESET: " + scenarioIndex);
         }
