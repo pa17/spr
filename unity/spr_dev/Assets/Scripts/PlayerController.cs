@@ -30,7 +30,11 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                rb.velocity = new Vector3(0, 0, 0);
+                rb.drag = 10;
+            }
+            else
+            {
+                rb.drag = 0.2f;
             }
 
             Vector3 speed = new Vector3(forward, 0.0f, 0.0f);

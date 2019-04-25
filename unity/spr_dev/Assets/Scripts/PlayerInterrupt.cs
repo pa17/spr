@@ -89,7 +89,7 @@ public class PlayerInterrupt : MonoBehaviour
                     response.directionResponses[scenarioHandler.scenarioIndex] = -1;
                 }
             }
-            else if (Input.GetMouseButtonDown(2))
+            else if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (scenarioHandler.scenarioIndex < PARAMETERS.numberOfScenarios)
                 {
