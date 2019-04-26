@@ -19,7 +19,14 @@ public class ResponseHandler : MonoBehaviour
 
     public void WriteResponse(int index, float responseTime)
     {
-        scenarioResponses[index] = responseTime * directionResponses[index];
+        if (index <= 2)
+        {
+            scenarioResponses[index] = responseTime * directionResponses[index];
+        }
+        else
+        {
+            scenarioResponses[index] = responseTime;
+        }
     }
 
     public void WriteChosenPosition(float zPosition)

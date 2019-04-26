@@ -15,7 +15,7 @@ public class ScenarioHandler : MonoBehaviour
     public int scenarioIndex = 0;
     public bool locationChosen = false;
 
-    GameObject[] scenarios;
+    public GameObject[] scenarios;
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +75,7 @@ public class ScenarioHandler : MonoBehaviour
         {
             scenarios[scenarioIndex].SetActive(true);
 
-            if (scenarioIndex == 1 | scenarioIndex == 2)
+            if (scenarios[scenarioIndex].name == "Scenario 2 - Audio" | scenarios[scenarioIndex].name == "Scenario 3 - Audio + Light")
             {
                 ArtificialLoudspeakerHandler scenarioAudio = scenarios[scenarioIndex].GetComponentInChildren<ArtificialLoudspeakerHandler>();
                 scenarioAudio.Play();

@@ -76,7 +76,10 @@ public class PlayerInterrupt : MonoBehaviour
                 Debug.Log("A");
                 if (scenarioHandler.scenarioIndex < PARAMETERS.numberOfScenarios)
                 {
-                    response.directionResponses[scenarioHandler.scenarioIndex] = 1;
+                    ScenarioID name = scenarioHandler.scenarios[scenarioHandler.scenarioIndex].GetComponent<ScenarioID>();
+                    int id = name.scenarioID;
+
+                    response.directionResponses[id] = 1;
                 }
             }
 
@@ -86,7 +89,10 @@ public class PlayerInterrupt : MonoBehaviour
                 Debug.Log("B");
                 if (scenarioHandler.scenarioIndex < PARAMETERS.numberOfScenarios)
                 {
-                    response.directionResponses[scenarioHandler.scenarioIndex] = -1;
+                    ScenarioID name = scenarioHandler.scenarios[scenarioHandler.scenarioIndex].GetComponent<ScenarioID>();
+                    int id = name.scenarioID;
+
+                    response.directionResponses[id] = -1;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Space))

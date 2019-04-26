@@ -14,6 +14,7 @@ public static class PARAMETERS
     public static float countdownTime = 3; // Time from scenario announcement to start
     public static int numberOfScenarios = 6;
     public static int[] directions = { 1, -1, 1, 1, 1, 1 };     // Direction: Left is 1, Right is -1.
+    // S1: 1, S2: -1, S3: 1, S4: 1, S5: 1, S6: 1
 
     // Player
     public static int MouseSensitivity = 4;

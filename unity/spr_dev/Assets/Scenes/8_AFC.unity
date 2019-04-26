@@ -1513,6 +1513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 75320814}
+  - component: {fileID: 75320815}
   m_Layer: 0
   m_Name: Scenario 4 - Control
   m_TagString: Untagged
@@ -1534,6 +1535,19 @@ Transform:
   m_Father: {fileID: 4799645498082326789}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &75320815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75320813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bdde78b54692745b165db646deebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioID: 3
 --- !u!224 &76539508 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8775570879098133860, guid: c3bd212b132bdf44680bfa8b093b0448,
@@ -8607,6 +8621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379297051}
+  - component: {fileID: 379297052}
   m_Layer: 0
   m_Name: Scenario 2 - Audio
   m_TagString: Untagged
@@ -8629,6 +8644,19 @@ Transform:
   m_Father: {fileID: 4799645498082326789}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &379297052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379297050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bdde78b54692745b165db646deebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioID: 1
 --- !u!224 &379334019 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8775570879098133860, guid: c3bd212b132bdf44680bfa8b093b0448,
@@ -9184,6 +9212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414534436}
+  - component: {fileID: 414534437}
   m_Layer: 0
   m_Name: Scenario 3 - Audio + Light
   m_TagString: Untagged
@@ -9207,6 +9236,19 @@ Transform:
   m_Father: {fileID: 4799645498082326789}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &414534437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414534435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bdde78b54692745b165db646deebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioID: 2
 --- !u!224 &422558692 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8775570879098133860, guid: c3bd212b132bdf44680bfa8b093b0448,
@@ -28291,6 +28333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292950338}
+  - component: {fileID: 1292950339}
   m_Layer: 0
   m_Name: Scenario 5 - Block
   m_TagString: Untagged
@@ -28313,6 +28356,19 @@ Transform:
   m_Father: {fileID: 4799645498082326789}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292950339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292950337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bdde78b54692745b165db646deebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioID: 4
 --- !u!224 &1295975316 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8775570879098133860, guid: c3bd212b132bdf44680bfa8b093b0448,
@@ -30946,6 +31002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1439051518}
+  - component: {fileID: 1439051519}
   m_Layer: 0
   m_Name: Scenario 1 - Control
   m_TagString: Untagged
@@ -30967,6 +31024,19 @@ Transform:
   m_Father: {fileID: 4799645498082326789}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439051519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439051517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bdde78b54692745b165db646deebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioID: 0
 --- !u!1001 &1441666271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41784,6 +41854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959393417}
+  - component: {fileID: 1959393418}
   m_Layer: 0
   m_Name: Scenario 6 - Curtains
   m_TagString: Untagged
@@ -41806,6 +41877,19 @@ Transform:
   m_Father: {fileID: 4799645498082326789}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959393418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959393416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bdde78b54692745b165db646deebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioID: 5
 --- !u!1001 &1968501800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45448,6 +45532,7 @@ MonoBehaviour:
   timer: {fileID: 0}
   scenarioIndex: 0
   locationChosen: 0
+  scenarios: []
 --- !u!114 &6531704664587604322
 MonoBehaviour:
   m_ObjectHideFlags: 0

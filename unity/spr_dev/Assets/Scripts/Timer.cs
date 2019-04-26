@@ -25,8 +25,11 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("The time taken until train perceived as passed: " + (timePassed - timer));
 
+        ScenarioID name = scenarioHandler.scenarios[scenarioHandler.scenarioIndex].GetComponent<ScenarioID>();
+        int id = name.scenarioID;
+
         // Write time taken to responses array. Multiplied by 1 if Left was chosen, by -1 if Right was chosen
-        response.WriteResponse(scenarioHandler.scenarioIndex, timePassed - timer);
+        response.WriteResponse(id, timePassed - timer);
     }
     // Update is called once per frame
     void Update()
