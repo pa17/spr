@@ -18,6 +18,7 @@ public class TrainMove : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rigidBody = GetComponent<Rigidbody>();
         trainContainer = GameObject.Find("TrainContainer");
         trainLightBottom = GameObject.Find("TrainLightBottom").GetComponent<Transform>();
@@ -30,6 +31,8 @@ public class TrainMove : MonoBehaviour
         trainLightBottomRot = trainLightBottom.eulerAngles;
         trainLightTopRot = trainLightTop.eulerAngles;
         trainLightDirectionalRot = trainLightDirectional.eulerAngles;
+
+        audioSource.volume = PARAMETERS.TrainVolume;
     }
 
     void Update()

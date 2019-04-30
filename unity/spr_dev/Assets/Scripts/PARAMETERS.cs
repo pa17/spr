@@ -20,7 +20,9 @@ public static class PARAMETERS
     public static int MouseSensitivity = 4;
 
     // Audio Illusion
-    public static float LoudspeakerDeceptionGain = 6; // Factor by which wrong side gets louder faster
+    public static float TrainVolume = 0.4f; // Volume at distance = 0
+    public static float LoudspeakerVolumeIncrease = 0.8f; // Volume at distance = 0;
+    public static float LoudspeakerBaseVolume = 0.2f; // Factor by which wrong side gets louder faster
 
     // Light Illusion
     public static int TriggerDistance = 150; // Distance from end of tunnel when light illusion is triggered
