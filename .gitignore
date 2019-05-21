@@ -3,6 +3,9 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Ss]prResources/
+[Ss]prCAD/
+[Ee]xternalCAD/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
