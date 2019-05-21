@@ -30,25 +30,13 @@ end
 %% TIME
 
 figure('Renderer', 'painters', 'Position', [5 5 800 300]);
-
-subplot(1,2,1)
 scatter(m(:,2), m(:,9), 'g');
 prms = polyfit(m(:,2),m(:,9),1);
 hold on
 plot(m(:,2), polyval(prms, m(:,2)), 'g');
-
+plot(prms);
 scatter(m(:,2), m(:,10), 'r');
-prms = polyfit(m(:,2),m(:,10),1);
-plot(m(:,2), polyval(prms, m(:,2)), 'r');
-
 scatter(m(:,2), m(:,11), 'b');
-prms = polyfit(m(:,2),m(:,11),1);
-plot(m(:,2), polyval(prms, m(:,2)), 'b');
-
-legend('S4', 'S4 Trend', 'S5', 'S5 Trend', 'S6', 'S6 Trend', 'Location','southeast')
-
-subplot(1,2,2)
-histogram(m(:,2))
 
 % % Boxplots
 % figure('Renderer', 'painters', 'Position', [5 5 800 300]);
