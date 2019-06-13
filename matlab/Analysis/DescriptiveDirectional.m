@@ -19,7 +19,7 @@ s2f = sum(m(:,4) == 0) / 20
 s3c = sum(m(:,5) == 1) / 20
 s3f = sum(m(:,5) == 0) / 20
 
-c = categorical({'S1','S2','S3'});
+c = categorical({'S1: Control','S2: Audio Illusion','S3: Audio + Light Illusion'});
 bar(c, [s1c s1f; s2c s2f; s3c s3f], 'stacked')
 legend('Correct', 'Wrong')
 ylabel('Directional Responses Percentage')

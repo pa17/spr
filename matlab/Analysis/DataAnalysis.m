@@ -31,29 +31,32 @@ end
 
 figure('Renderer', 'painters', 'Position', [5 5 800 300]);
 
-subplot(1,2,1)
-scatter(m(:,2), m(:,9), 'g');
-prms = polyfit(m(:,2),m(:,9),1);
-hold on
-plot(m(:,2), polyval(prms, m(:,2)), 'g');
+% subplot(1,2,1)
+% histogram(m(:,2))
+% xlabel('Distance from platform centre (m)')
+% 
+% subplot(1,2,2)
+% scatter(m(:,2), m(:,9), 'g');
+% prms = polyfit(m(:,2),m(:,9),1);
+% hold on
+% plot(m(:,2), polyval(prms, m(:,2)), 'g');
+% 
+% scatter(m(:,2), m(:,10), 'r');
+% prms = polyfit(m(:,2),m(:,10),1);
+% plot(m(:,2), polyval(prms, m(:,2)), 'r');
+% 
+% scatter(m(:,2), m(:,11), 'b');
+% prms = polyfit(m(:,2),m(:,11),1);
+% plot(m(:,2), polyval(prms, m(:,2)), 'b');
+% 
+% legend('S4', 'S4 Trend', 'S5', 'S5 Trend', 'S6', 'S6 Trend', 'Location','southeast')
+% xlabel('Distance from platform centre (m)')
+% ylabel('Response time (s)')
 
-scatter(m(:,2), m(:,10), 'r');
-prms = polyfit(m(:,2),m(:,10),1);
-plot(m(:,2), polyval(prms, m(:,2)), 'r');
-
-scatter(m(:,2), m(:,11), 'b');
-prms = polyfit(m(:,2),m(:,11),1);
-plot(m(:,2), polyval(prms, m(:,2)), 'b');
-
-legend('S4', 'S4 Trend', 'S5', 'S5 Trend', 'S6', 'S6 Trend', 'Location','southeast')
-
-subplot(1,2,2)
-histogram(m(:,2))
-
-% % Boxplots
-% figure('Renderer', 'painters', 'Position', [5 5 800 300]);
-% boxplot(m(:,(6:11)), 'labels', {'S1', 'S2', 'S3', 'S4', 'S5', 'S6'})
-% ylabel('Response Time (s)');
+% Boxplots
+figure('Renderer', 'painters', 'Position', [5 5 800 300]);
+boxplot(m(:,(6:11)), 'labels', {'S1: Control', 'S2: Audio Illusion', 'S3: Audio + Light Illusion', 'S4: Control 2', 'S5: Block Obstruction', 'S6: Curtain Obstruction'})
+ylabel('Response Time (s)');
 % 
 % % Histograms
 % figure('Renderer', 'painters', 'Position', [5 5 800 300]);
