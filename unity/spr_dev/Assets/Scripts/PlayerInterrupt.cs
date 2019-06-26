@@ -19,6 +19,8 @@ public class PlayerInterrupt : MonoBehaviour
     // UI GameObjects
     GameObject countdownTarget, welcomeTarget, freeNavigateTarget, navigateToFixedTarget;
 
+    public bool skipToDemo = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,7 @@ public class PlayerInterrupt : MonoBehaviour
     {
         if (welcome.isActive)
         {
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) || skipToDemo == true)
             {
                 countdown.isActive = true;
 

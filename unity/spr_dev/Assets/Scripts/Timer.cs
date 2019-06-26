@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     public float timePassed = 0;
     public float timer = 0;
 
+    public bool timerReset = false;
+
     void Start()
     {
         response = GameObject.Find("Response").GetComponent<ResponseHandler>();
@@ -18,12 +20,15 @@ public class Timer : MonoBehaviour
 
     public void ResetTimer()
     {
+        timerReset = false;
+
         timer = timePassed;
     }
 
     public void StopTimer()
     {
         Debug.Log("The time taken until train perceived as passed: " + (timePassed - timer));
+        timerReset = true;
 
         ScenarioID name = scenarioHandler.scenarios[scenarioHandler.scenarioIndex].GetComponent<ScenarioID>();
         int id = name.scenarioID;
@@ -31,6 +36,7 @@ public class Timer : MonoBehaviour
         // Write time taken to responses array. Multiplied by 1 if Left was chosen, by -1 if Right was chosen
         response.WriteResponse(id, timePassed - timer);
     }
+
     // Update is called once per frame
     void Update()
     {
